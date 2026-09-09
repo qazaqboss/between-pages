@@ -1,0 +1,45 @@
+<!-- Исходник баннера-превью. Рендер: Chrome --headless --force-device-scale-factor=2 --window-size=1200,630 --screenshot -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Manrope:wght@500;700&family=Caveat:wght@600&display=swap">
+<style>
+  *{box-sizing:border-box;margin:0}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:#FBF7EA;
+    background-image:
+      radial-gradient(circle at 8% 10%, rgba(201,169,97,.16), transparent 42%),
+      radial-gradient(circle at 92% 78%, rgba(122,154,75,.14), transparent 40%),
+      radial-gradient(circle at 62% 12%, rgba(216,98,58,.10), transparent 38%);
+    font-family:"Manrope",sans-serif;position:relative;
+  }
+  .frame{position:absolute;inset:26px;border:1px solid #DCCEB2;border-radius:26px}
+  .inner{position:absolute;inset:0;display:flex;align-items:center;padding:0 74px}
+  .left{width:560px;flex:none;position:relative;z-index:5}
+  .eyebrow{font-size:15px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:#6B584C}
+  img.logo{width:520px;display:block;margin:0 0 26px -6px}
+  h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:62px;line-height:1.08;color:#4A2C1A;margin-top:22px}
+  h1 em{font-style:italic;color:#D42A1F}
+  .hand{font-family:"Caveat",cursive;font-size:29px;color:#6B584C;margin-top:18px}
+  .rule{width:64px;height:3px;background:#D42A1F;border-radius:2px;margin-top:30px}
+  .stick{position:absolute;filter:drop-shadow(0 26px 30px rgba(74,44,26,.26))}
+  .s1{right:412px;top:104px;height:236px;transform:rotate(-15deg)}
+  .s2{right:212px;top:56px;height:330px;transform:rotate(-2deg);z-index:3}
+  .s3{right:58px;top:112px;height:238px;transform:rotate(11deg)}
+  .s4{right:242px;bottom:58px;height:212px;transform:rotate(7deg);z-index:2}
+  .foot{position:absolute;left:74px;bottom:52px;font-size:17px;font-weight:500;color:#6B584C;letter-spacing:.02em}
+  .foot b{color:#4A2C1A;font-weight:700}
+</style>
+<div class="frame"></div>
+<div class="inner">
+  <div class="left">
+    <img class="logo" src="./logo.png" alt="">
+    <p class="eyebrow">Дизайнерские закладки · Актобе</p>
+    <h1>Между страницами<br><em>живёшь ты</em></h1>
+    <p class="hand">Отметь страницу. Отметь себя.</p>
+    <div class="rule"></div>
+  </div>
+</div>
+<img class="stick s1" src="./car16.png" alt="">
+<img class="stick s2" src="./matcha.png" alt="">
+<img class="stick s3" src="./cheers.png" alt="">
+<img class="stick s4" src="./piano.png" alt="">
+<p class="foot">8 дизайнов · наборы в крафт-конверте · доставка по Казахстану <b>2–4 дня</b></p>

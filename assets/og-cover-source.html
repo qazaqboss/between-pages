@@ -1,40 +1,45 @@
 <!-- Исходник баннера-превью. Рендер: Chrome --headless --force-device-scale-factor=2 --window-size=1200,630 --screenshot -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@400;500&family=Roboto+Mono&display=swap">
 <style>
   *{box-sizing:border-box;margin:0}
   html,body{width:1200px;height:630px;overflow:hidden}
-  body{background:#0e100f;color:#fffce1;font-family:"Inter Tight",sans-serif;position:relative;letter-spacing:-.01em}
-  .inner{position:absolute;left:64px;top:88px;z-index:5;width:700px}
-  .bracket{font-size:19px;font-weight:400;color:#fffce1}
-  h1{font-size:92px;font-weight:600;line-height:.9;letter-spacing:-1.85px;margin-top:26px;white-space:nowrap}
-  .grad{background:linear-gradient(114.41deg,#0ae448 20.74%,#abff84 65.5%);-webkit-background-clip:text;color:transparent}
-  .lead{margin-top:30px;font-size:23px;line-height:1.38;letter-spacing:-.23px;color:#7c7c6f;max-width:19ch}
-  .foot{position:absolute;left:64px;bottom:52px;display:flex;gap:44px;align-items:flex-end;z-index:5}
-  .foot div b{display:block;font-size:34px;font-weight:600;line-height:1;letter-spacing:-.34px}
-  .foot div span{display:block;margin-top:8px;font-size:14px;color:#7c7c6f}
-  .rule{position:absolute;left:64px;right:64px;bottom:150px;height:1px;background:#42433d;z-index:4}
-  figure{position:absolute;margin:0;z-index:3}
-  figure img{display:block;height:100%;width:auto;max-width:none;position:relative;z-index:2}
-  .glow{position:absolute;left:50%;top:50%;width:170%;height:170%;transform:translate(-50%,-50%);
-        border-radius:50%;filter:blur(48px);opacity:.34;z-index:1}
-  .s1{right:212px;top:56px;height:296px;transform:rotate(-9deg)}
-  .s1 .glow{background:radial-gradient(circle,#abff84,transparent 62%)}
-  .s2{right:52px;top:120px;height:232px;transform:rotate(10deg)}
-  .s2 .glow{background:radial-gradient(circle,#fec5fb,transparent 62%)}
-  .s3{right:126px;bottom:172px;height:186px;transform:rotate(6deg)}
-  .s3 .glow{background:radial-gradient(circle,#9d95ff,transparent 62%)}
+  body{background:#fdf6ee;color:#21201c;font-family:"Inter",sans-serif;position:relative;letter-spacing:-.01em}
+  .l{position:absolute;left:72px;top:118px;width:600px}
+  .eyebrow{font-size:15px;font-weight:500;color:#ff5c00}
+  h1{font-family:"Cormorant Garamond",serif;font-weight:300;color:#2b180a;
+     font-size:88px;line-height:1;letter-spacing:-.03em;margin-top:20px}
+  h1 em{font-style:italic;color:#7f6e60}
+  .lead{margin-top:26px;font-size:19px;line-height:1.4;color:#7f6e60;max-width:24ch}
+  .mono{position:absolute;left:72px;bottom:56px;font-family:"Roboto Mono",monospace;
+        font-size:14px;color:#94877c;letter-spacing:0}
+  .qcard{position:absolute;width:250px;background:#fff;border:1px solid #d9cfc3;border-radius:12px;
+         padding:16px;display:flex;flex-direction:column;gap:12px}
+  .who{display:flex;align-items:center;gap:12px}
+  .ava{width:64px;height:64px;border-radius:70px;background:#fdf6ee;flex:none;
+       display:flex;align-items:center;justify-content:center}
+  .ava img{width:50px;height:50px;object-fit:contain}
+  .who b{display:block;font-size:14px;font-weight:500;color:#2b180a}
+  .who span{display:block;margin-top:2px;font-size:12px;color:#94877c}
+  q{font-size:14px;line-height:1.4;color:#21201c;quotes:"«" "»"}
+  .c1{right:290px;top:56px;transform:rotate(-3deg)}
+  .c2{right:44px;top:206px;transform:rotate(2.5deg)}
+  .c3{right:250px;bottom:56px;transform:rotate(2deg)}
 </style>
-<div class="inner">
-  <p class="bracket">{ Between Pages® · Актобе }</p>
-  <h1>Между страниц<br><span class="grad">живёшь ты</span></h1>
-  <p class="lead">Дизайнерские закладки для книг</p>
+<div class="l">
+  <p class="eyebrow">Дизайнерские закладки · Актобе</p>
+  <h1>Между страниц<br><em>живёшь ты</em></h1>
+  <p class="lead">Закладка, которая говорит о тебе больше, чем книга в руках</p>
 </div>
-<figure class="s1"><span class="glow"></span><img src="./matcha.png" alt=""></figure>
-<figure class="s2"><span class="glow"></span><img src="./cheers.png" alt=""></figure>
-<figure class="s3"><span class="glow"></span><img src="./piano.png" alt=""></figure>
-<div class="rule"></div>
-<div class="foot">
-  <div><b>8</b><span>дизайнов</span></div>
-  <div><b>5</b><span>коллекций</span></div>
-  <div><b>2–4</b><span>дня доставки по Казахстану</span></div>
-</div>
+<p class="mono">50 × 150 мм · 350 г/м² · доставка 2–4 дня</p>
+<article class="qcard c1">
+  <div class="who"><span class="ava"><img src="./matcha.png" alt=""></span><span><b>Matcha &amp; Books</b><span>Кофейная</span></span></div>
+  <q>Для тех, кто читает медленно и пьёт зелёное</q>
+</article>
+<article class="qcard c2">
+  <div class="who"><span class="ava"><img src="./car16.png" alt=""></span><span><b>Болид №16</b><span>Гонки</span></span></div>
+  <q>Для того, кто болеет сердцем</q>
+</article>
+<article class="qcard c3">
+  <div class="who"><span class="ava"><img src="./cheers.png" alt=""></span><span><b>Cheers</b><span>Праздник</span></span></div>
+  <q>Дочитала — отпразднуй</q>
+</article>

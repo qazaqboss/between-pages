@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Between Pages — дизайнерские закладки для книг. Каталог, наборы и афиша встреч в Актобе.">
-<meta name="theme-color" content="#0e100f">
+<meta name="theme-color" content="#fdf6ee">
 <link rel="canonical" href="https://qazaqboss.github.io/between-pages/">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -28,350 +28,347 @@
 <title>Between Pages</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500&family=Roboto+Mono:wght@400&display=swap">
 <style>
 :root{
-  /* поверхности */
-  --black:#0e100f;
-  --off-black:#191919;
-  --cream:#fffce1;
-  --muted:#7c7c6f;
-  --hairline:#42433d;
+  --parchment:#fdf6ee;
+  --soft-cream:#f0e6dc;
+  --card:#ffffff;
+  --charcoal:#21201c;
+  --sepia:#2b180a;
+  --bronze:#7f6e60;
+  --driftwood:#94877c;
+  --stone:#a99d93;
+  --pebble:#d9cfc3;
+  --chestnut:#3e2407;
+  --ember:#f65726;
+  --saffron:#ff5c00;
+  --peach:#fed0b3;
 
-  /* таксономия коллекций */
-  --green:#0ae448;
-  --light-green:#abff84;
-  --orange:#ff8709;
-  --pink:#fec5fb;
-  --lilac:#9d95ff;
-  --blue:#00bae2;
-  --grad-green:linear-gradient(114.41deg,#0ae448 20.74%,#abff84 65.5%);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 
-  --font:"Inter Tight","Inter Tight Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --max:1280px;
-  --pad:32px;
+  --max:1200px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
-  margin:0;background:var(--black);color:var(--cream);
-  font-family:var(--font);font-size:19px;line-height:1.15;font-weight:400;
-  letter-spacing:-.01em;-webkit-font-smoothing:antialiased;
-  overflow-wrap:break-word;overflow-x:hidden;
+  margin:0;background:var(--parchment);color:var(--charcoal);
+  font-family:var(--sans);font-size:15px;line-height:1.32;letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased;overflow-wrap:break-word;overflow-x:hidden;
 }
 img{max-width:100%}
 a{color:inherit;text-decoration:none}
 p{margin:0}
-h1,h2,h3,h4{margin:0;font-weight:600;letter-spacing:-.011em;line-height:1.2;text-wrap:balance}
-::selection{background:var(--light-green);color:var(--black)}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:300;color:var(--sepia);
+  letter-spacing:-.022em;line-height:1.2;text-wrap:balance}
+::selection{background:var(--peach);color:var(--sepia)}
 
 .wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
-.muted{color:var(--muted)}
-.lg{font-size:23px;line-height:1.38;letter-spacing:-.23px}
-.cap{font-size:14px;line-height:1.4;letter-spacing:-.14px}
+.body{font-size:15px;line-height:1.32;color:var(--bronze)}
+.body-lg{font-size:17px;line-height:1.4;color:var(--bronze)}
+.mono{font-family:var(--mono);font-size:13px;line-height:1.4;letter-spacing:0}
 .tnum{font-variant-numeric:tabular-nums}
 
-/* фигурная аннотация — подпись всех секций */
-.bracket{font-size:16px;line-height:1.15;font-weight:400;color:var(--cream);display:block}
-.bracket::before{content:"{ "}
-.bracket::after{content:" }"}
+/* эйбрау-метка над каждым заголовком секции */
+.eyebrow{font-family:var(--sans);font-size:12px;line-height:1.2;font-weight:500;
+  letter-spacing:.02em;color:var(--saffron);text-transform:none}
 
-/* ghost-пилюли: единственный тип управления */
-.pill{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:15px 24px;border:1px solid var(--cream);border-radius:100px;
-  background:transparent;color:var(--cream);
-  font-family:var(--font);font-size:18px;font-weight:600;line-height:1.05;letter-spacing:-.01em;
-  cursor:pointer;transition:opacity .2s ease,border-color .2s ease,color .2s ease;
-}
-.pill:hover{opacity:.7}
-.pill.sm{padding:11px 18px;font-size:16px}
-.pill.dim{border-color:var(--hairline);color:var(--muted)}
-.pill.dim:hover{border-color:var(--cream);color:var(--cream);opacity:1}
-.pill.on-cream{border-color:var(--black);color:var(--black)}
+/* заголовочный блок секции: метка → двухстрочный сериф → один абзац */
+.sec{text-align:center;margin-bottom:48px}
+.sec h2{font-size:clamp(32px,4.4vw,56px);line-height:1.05;letter-spacing:-.022em;margin-top:12px}
+.sec h2 em{font-style:italic;color:var(--bronze)}
+.sec p{margin:16px auto 0;max-width:640px;font-size:17px;line-height:1.4;color:var(--bronze)}
 
-/* единственный хроматический контрол — градиентная обводка */
-.cta{position:relative;border:0;background:transparent;color:var(--cream);
-  padding:15px 26px;border-radius:100px;
-  font-family:var(--font);font-size:18px;font-weight:600;line-height:1.05;cursor:pointer;
-  display:inline-flex;align-items:center;gap:10px;transition:opacity .2s ease}
-.cta::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
-  background:var(--grad-green);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  mask-composite:exclude;pointer-events:none}
-.cta:hover{opacity:.78}
-.cta.sm{padding:11px 20px;font-size:16px}
+/* кнопки: единственная заливка — каштан с персиковым свечением */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--sans);font-size:15px;font-weight:500;line-height:1.2;letter-spacing:-.01em;
+  padding:12px 18px;border-radius:12px;border:1px solid transparent;cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+.btn-primary{background:var(--chestnut);color:#fff;box-shadow:0 0 0 6px rgba(254,208,179,.55)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 0 0 9px rgba(254,208,179,.6)}
+.btn-ghost{background:transparent;color:var(--sepia);border-color:var(--pebble)}
+.btn-ghost:hover{border-color:var(--driftwood)}
+.btn-soft{background:var(--card);color:var(--sepia);border-color:var(--pebble)}
+.btn-soft:hover{background:var(--parchment)}
+.btn.sm{padding:9px 14px;font-size:14px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
 
-a:focus-visible,button:focus-visible{outline:2px solid var(--light-green);outline-offset:3px}
+/* ---------- навигация ---------- */
+.nav{background:var(--soft-cream);border-bottom:1px solid var(--pebble)}
+.nav-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:12px 0}
+.nav-l,.nav-r{display:flex;align-items:center;gap:20px}
+.nav-r{justify-content:flex-end}
+.nav a.lnk{font-size:14px;color:#000;transition:color .18s ease}
+.nav a.lnk:hover{color:var(--ember)}
+.nav .mark{height:22px;width:auto;display:block;margin-inline:auto}
+.nav-mob{display:none}
+#burger{display:none;background:none;border:1px solid var(--pebble);border-radius:8px;
+  width:40px;height:36px;font-size:16px;color:var(--sepia);cursor:pointer;line-height:1}
 
-/* ---------- объявление ---------- */
-.announce{padding:12px 24px;text-align:center;font-size:14px;line-height:1.4;color:var(--cream)}
-.announce a{background:var(--grad-green);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* ---------- герой: созвездие карточек вокруг заголовка ---------- */
+.hero{position:relative;padding:96px 0 80px;text-align:center;overflow:hidden}
+.hero-mid{position:relative;z-index:3;max-width:760px;margin-inline:auto}
+.hero h1{font-size:clamp(40px,6.6vw,88px);line-height:1;letter-spacing:-.03em}
+.hero h1 em{font-style:italic;color:var(--bronze)}
+.hero .body-lg{margin:24px auto 0;max-width:520px}
+.hero-cta{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.hero-note{margin-top:20px;font-size:13px;color:var(--stone)}
 
-/* ---------- шапка ---------- */
-header{position:sticky;top:0;z-index:60;background:rgba(14,16,15,.86);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--hairline)}
-.bar{display:flex;align-items:center;gap:16px;padding:14px 0}
-.bar .mark{height:26px;width:auto;display:block}
-nav{margin-left:auto;display:flex;align-items:center;gap:6px}
-nav a{padding:10px 12px;font-size:16px;line-height:1.15;color:var(--muted);transition:color .18s ease}
-nav a:hover{color:var(--cream)}
-.bar-actions{display:flex;gap:10px;align-items:center;margin-left:10px}
-#burger{display:none;margin-left:auto;background:none;border:0;color:var(--cream);
-  width:44px;height:44px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer}
-
-/* ---------- герой ---------- */
-.hero{position:relative;padding:76px 0 96px;overflow:hidden}
-.hero-inner{position:relative;z-index:3;padding-inline:var(--pad)}
-.display{
-  font-weight:600;font-size:clamp(52px,10.4vw,224px);line-height:.9;letter-spacing:-.02em;
-  color:var(--cream);margin:22px 0 0;text-wrap:nowrap;
-}
-.display .grad{background:var(--grad-green);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-lead{max-width:52ch;margin-top:32px;font-size:23px;line-height:1.38;letter-spacing:-.23px;color:var(--muted)}
-.hero-lead b{color:var(--cream);font-weight:400}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.facts{display:flex;gap:76px;margin-top:76px;flex-wrap:wrap}
-.facts b{display:block;font-size:44px;font-weight:600;line-height:1.2;letter-spacing:-.44px}
-.facts span{display:block;margin-top:8px;font-size:14px;line-height:1.4;color:var(--muted);max-width:22ch}
-
-/* стикеры перекрывают типографику, глубина — от градиентного свечения */
-.hero-art{position:absolute;inset:0;z-index:2;pointer-events:none}
-.hero-art figure{position:absolute;margin:0}
-.hero-art img{display:block;height:100%;width:auto;max-width:none;position:relative;z-index:2}
-.hero-art .glow{position:absolute;left:50%;top:50%;width:150%;height:150%;transform:translate(-50%,-50%);
-  border-radius:50%;filter:blur(46px);opacity:.30;z-index:1}
-.a1{right:6%;top:4%;height:320px;transform:rotate(-8deg)}
-.a1 .glow{background:radial-gradient(circle,var(--light-green),transparent 62%)}
-.a2{right:30%;bottom:2%;height:250px;transform:rotate(9deg)}
-.a2 .glow{background:radial-gradient(circle,var(--lilac),transparent 62%)}
-.a3{right:2%;bottom:8%;height:220px;transform:rotate(6deg)}
-.a3 .glow{background:radial-gradient(circle,var(--pink),transparent 62%)}
-
-/* ---------- бегущая строка ---------- */
-.strip{border-block:1px solid var(--hairline);overflow:hidden;background:var(--off-black)}
-.strip-track{display:flex;gap:40px;padding:16px 0;white-space:nowrap;animation:slide 42s linear infinite}
-.strip span{font-size:16px;line-height:1.15;color:var(--muted)}
-.strip span::after{content:"✦";margin-left:40px;color:var(--hairline)}
-@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.orbit{position:absolute;inset:0;z-index:2;pointer-events:none}
+.qcard{position:absolute;width:236px;background:var(--card);border:1px solid var(--pebble);
+  border-radius:12px;padding:16px;text-align:left;display:flex;flex-direction:column;gap:12px}
+.qcard .who{display:flex;align-items:center;gap:12px}
+.qcard .ava{width:70px;height:70px;border-radius:70px;background:var(--parchment);flex:none;
+  display:flex;align-items:center;justify-content:center;overflow:hidden}
+.qcard .ava img{width:56px;height:56px;object-fit:contain}
+.qcard b{display:block;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--sepia)}
+.qcard .role{font-size:12px;color:var(--driftwood);margin-top:2px}
+.qcard q{font-size:14px;line-height:1.4;color:var(--charcoal);quotes:"«" "»"}
+.q1{left:1%;top:4%}
+.q2{left:4%;top:46%}
+.q3{left:1%;bottom:2%}
+.q4{right:1%;top:2%}
+.q5{right:4%;top:44%}
+.q6{right:1%;bottom:4%}
+.orbit-grid{display:none}
 
 /* ---------- секции ---------- */
-section{padding:96px 0;scroll-margin-top:70px}
-.sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:76px}
-.sec-top h2{font-size:clamp(38px,5vw,66px);line-height:1.2;letter-spacing:-.66px;margin-top:16px;max-width:18ch}
-.sec-top .note{font-size:16px;line-height:1.4;color:var(--muted);max-width:30ch}
+section{padding:80px 0;scroll-margin-top:24px}
+.band{background:var(--soft-cream);border-block:1px solid var(--pebble)}
 
-/* блоки коллекций */
-.tool{display:grid;grid-template-columns:440px 1fr;gap:76px;align-items:center;
-  padding:76px 0;border-top:1px solid var(--hairline)}
-.tool:last-of-type{border-bottom:1px solid var(--hairline)}
-.tool-art{position:relative;height:300px;display:flex;align-items:center;justify-content:center}
-.tool-art img{position:relative;z-index:2;height:100%;width:auto;max-width:none}
-.tool-art .glow{position:absolute;left:50%;top:50%;width:340px;height:340px;transform:translate(-50%,-50%);
-  border-radius:50%;filter:blur(50px);opacity:.34;
-  background:radial-gradient(circle,var(--hue),transparent 62%)}
-.cat{font-size:34px;font-weight:600;line-height:1;letter-spacing:-.34px;color:var(--hue)}
-.tool h3{font-size:44px;line-height:1.2;letter-spacing:-.44px;margin-top:16px;max-width:22ch}
-.tool p.lg{margin-top:20px;color:var(--muted);max-width:46ch}
-.tool .pill{margin-top:32px}
+/* три причины */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.reason{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px}
+.reason h3{font-size:24px;line-height:1.22;letter-spacing:-.013em}
+.reason p{margin-top:12px}
 
-/* ---------- каталог ---------- */
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+/* коллекции — двухколоночные карточки со вложенным составом */
+.cols{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.feature{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;gap:16px}
+.feature-top{display:flex;align-items:flex-start;gap:20px}
+.feature-art{width:96px;height:96px;flex:none;border-radius:16px;background:var(--parchment);
+  display:flex;align-items:center;justify-content:center;padding:8px}
+.feature-art img{max-height:100%;width:auto;object-fit:contain}
+.feature h3{font-size:24px;line-height:1.22;letter-spacing:-.013em}
+.feature .lead{margin-top:8px}
+.inner-card{background:var(--parchment);border-radius:8px;padding:16px;margin-top:auto}
+.inner-card .lbl{font-size:12px;color:var(--driftwood)}
+.inner-card .line{margin-top:8px;font-size:14px;line-height:1.4;color:var(--charcoal)}
+.inner-card .line b{font-weight:400;color:var(--ember)}
+.inner-card .go{margin-top:12px;font-size:13px;color:var(--stone);background:none;border:0;padding:0;
+  font-family:var(--sans);cursor:pointer;transition:color .18s ease}
+.inner-card .go:hover{color:var(--ember)}
+
+/* каталог */
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:32px}
+.chip{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--sepia);
+  background:transparent;border:1px solid var(--pebble);border-radius:8px;padding:8px 14px;cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,color .18s ease}
+.chip:hover{border-color:var(--driftwood)}
+.chip[aria-pressed="true"]{background:var(--soft-cream);border-color:var(--driftwood)}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.card{background:var(--off-black);border-radius:8px;padding:24px;display:flex;flex-direction:column}
+.card{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:20px;
+  display:flex;flex-direction:column}
 .card.hide{display:none}
-.shot{position:relative;height:230px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
-.shot img{position:relative;z-index:2;height:100%;width:auto;max-width:100%;object-fit:contain;
-  transition:transform .4s cubic-bezier(.2,.7,.3,1)}
-.card:hover .shot img{transform:translateY(-8px) scale(1.03)}
-.shot .glow{position:absolute;left:50%;top:52%;width:240px;height:240px;transform:translate(-50%,-50%);
-  border-radius:50%;filter:blur(44px);opacity:.26;background:radial-gradient(circle,var(--hue),transparent 62%)}
-.card .cat{font-size:16px;font-weight:400;line-height:1.15}
-.card h3{font-size:24px;line-height:1.2;letter-spacing:-.24px;margin-top:8px}
-.card .phrase{margin-top:8px;font-size:16px;line-height:1.4;color:var(--muted)}
-.card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:24px}
-.price{font-size:23px;font-weight:600;letter-spacing:-.23px;font-variant-numeric:tabular-nums}
-#empty{margin-top:24px;color:var(--muted)}
+.tile{background:var(--parchment);border-radius:12px;height:190px;display:flex;align-items:center;
+  justify-content:center;padding:16px;margin-bottom:16px}
+.tile img{max-height:100%;width:auto;object-fit:contain;transition:transform .35s ease}
+.card:hover .tile img{transform:translateY(-4px)}
+.card .tag{font-size:12px;color:var(--driftwood)}
+.card h3{font-size:24px;line-height:1.22;letter-spacing:-.013em;margin-top:6px}
+.card .phrase{margin-top:8px;font-size:14px;line-height:1.4;color:var(--bronze)}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:20px}
+.price{font-family:var(--sans);font-size:17px;font-weight:500;color:var(--sepia);
+  letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+#empty{margin-top:24px;text-align:center}
+.set .price{font-size:19px}
 
-/* ---------- наборы ---------- */
+/* наборы */
 .sets{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.set{background:var(--off-black);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:16px}
-.set h3{font-size:24px;line-height:1.2}
-.set ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-.set li{font-size:16px;line-height:1.15;color:var(--muted);display:flex;gap:10px}
-.set li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--hue);margin-top:5px;flex:none}
-.set-foot{display:flex;align-items:baseline;gap:12px;margin-top:auto;padding-top:8px}
-.was{font-size:16px;color:var(--muted);text-decoration:line-through}
-/* единственная кремовая панель — намеренный акцент */
-.build{grid-column:1 / -1;background:var(--cream);color:var(--black);border-radius:8px;
+.set{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;gap:12px}
+.set h3{font-size:24px;line-height:1.22;letter-spacing:-.013em}
+.set ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--bronze)}
+.set-foot{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:8px}
+.was{font-size:14px;color:var(--stone);text-decoration:line-through}
+.build{grid-column:1 / -1;background:var(--card);border:1px solid var(--pebble);border-radius:16px;
   padding:32px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.build h3{font-size:34px;line-height:1.2;letter-spacing:-.34px;color:var(--black)}
-.build p{margin-top:8px;font-size:19px;line-height:1.15;color:#42433d;max-width:44ch}
+.build h3{font-size:40px;line-height:1.2;letter-spacing:-.02em}
+.build p{margin-top:12px;max-width:52ch}
 
-/* ---------- афиша ---------- */
-.ev{display:grid;grid-template-columns:96px 1fr auto;gap:32px;align-items:start;
-  padding:32px 0;border-top:1px solid var(--hairline)}
-.events .ev:last-child{border-bottom:1px solid var(--hairline)}
-.ev-date b{display:block;font-size:44px;font-weight:600;line-height:1;letter-spacing:-.44px;font-variant-numeric:tabular-nums}
-.ev-date span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
-.ev h3{font-size:34px;line-height:1.2;letter-spacing:-.34px}
-.ev-kind{font-size:16px;color:var(--muted);margin-top:8px}
-.ev p{margin-top:16px;font-size:19px;line-height:1.15;color:var(--muted);max-width:56ch}
-.ev-meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:16px;font-size:14px;line-height:1.4;color:var(--muted)}
-.ev-meta b{color:var(--cream);font-weight:400}
-.ev-side{display:flex;flex-direction:column;align-items:flex-end;gap:16px;text-align:right}
-.seats{font-size:14px;color:var(--muted)}
-.seats.few{color:var(--cream)}
+/* афиша */
+.events{display:grid;gap:12px}
+.ev{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px;
+  display:grid;grid-template-columns:88px 1fr auto;gap:24px;align-items:start}
+.ev-date{text-align:center;background:var(--parchment);border-radius:12px;padding:12px 8px}
+.ev-date b{display:block;font-family:var(--serif);font-weight:300;font-size:40px;line-height:1;
+  color:var(--sepia);font-variant-numeric:lining-nums tabular-nums}
+.ev-date span{display:block;margin-top:6px;font-size:12px;color:var(--driftwood)}
+.ev h3{font-size:24px;line-height:1.22;letter-spacing:-.013em}
+.ev .kind{font-size:12px;color:var(--driftwood);margin-top:4px}
+.ev p{margin-top:12px;font-size:15px;line-height:1.32;color:var(--bronze);max-width:60ch}
+.ev-meta{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px;font-size:13px;color:var(--driftwood)}
+.ev-meta b{font-weight:400;color:var(--charcoal)}
+.ev-side{display:flex;flex-direction:column;align-items:flex-end;gap:12px;text-align:right}
+.seats{font-size:13px;color:var(--driftwood)}
+.seats.few{color:var(--ember)}
 
-/* ---------- о бренде ---------- */
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:76px;align-items:start}
-.about p+p{margin-top:20px}
-.about .lg{color:var(--muted);max-width:56ch}
-.about .lg b{color:var(--cream);font-weight:400}
-.sign{margin-top:32px;font-size:34px;font-weight:600;line-height:1.2;letter-spacing:-.34px}
-.specs{margin:0}
-.specs div{display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-top:1px solid var(--hairline)}
-.specs div:last-child{border-bottom:1px solid var(--hairline)}
-.specs dt{font-size:16px;color:var(--muted)}
-.specs dd{margin:0;font-size:16px;text-align:right}
+/* «портретная» панель: продукт в центре, характеристики по краям */
+.trust{display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:24px;align-items:stretch}
+.trust-col{display:grid;gap:24px;align-content:start}
+.spec-card{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px}
+.spec-card h3{font-size:20px;line-height:1.32;letter-spacing:-.012em}
+.spec-card p{margin-top:8px}
+.spec-card .mono{margin-top:12px;color:var(--driftwood)}
+.portrait{position:relative;border-radius:16px;min-height:420px;overflow:hidden;
+  background:linear-gradient(160deg,#f65726 0%,#ff5c00 55%,#e04a1d 100%);
+  display:flex;align-items:center;justify-content:center;padding:32px}
+.portrait img{max-height:300px;width:auto;object-fit:contain}
+.portrait::after{content:"";position:absolute;left:0;right:0;bottom:0;height:180px;
+  background:linear-gradient(to top,rgba(43,24,10,.42),transparent);pointer-events:none}
+.portrait .cap{position:absolute;left:24px;right:24px;bottom:24px;color:#fff;z-index:2}
+.portrait .cap b{display:block;font-family:var(--sans);font-size:14px;font-weight:500}
+.portrait .cap span{display:block;margin-top:2px;font-size:13px;opacity:.85}
 
-/* ---------- шаги ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.step{border-top:1px solid var(--hairline);padding-top:24px}
-.step b{display:block;font-size:14px;color:var(--muted);font-weight:400}
-.step h3{font-size:34px;line-height:1.2;letter-spacing:-.34px;margin-top:16px}
-.step p{margin-top:16px;font-size:16px;line-height:1.4;color:var(--muted)}
+/* о бренде */
+.about{max-width:720px;margin-inline:auto;text-align:center}
+.about p+p{margin-top:16px}
+.about .sign{margin-top:32px;font-family:var(--serif);font-size:32px;font-style:italic;
+  font-weight:300;color:var(--sepia);letter-spacing:-.02em}
 
-/* ---------- отзывы ---------- */
+/* шаги */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px}
+.step .n{font-family:var(--mono);font-size:13px;color:var(--saffron)}
+.step h3{font-size:24px;line-height:1.22;letter-spacing:-.013em;margin-top:12px}
+.step p{margin-top:8px}
+
+/* отзывы */
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.rev{background:var(--off-black);border-radius:8px;padding:24px;display:flex;flex-direction:column;gap:24px}
-.rev p{font-size:23px;line-height:1.38;letter-spacing:-.23px}
-.rev footer{margin-top:auto;font-size:14px;color:var(--muted)}
+.rev{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px;
+  display:flex;flex-direction:column;gap:16px}
+.rev q{font-family:var(--serif);font-size:24px;font-weight:300;line-height:1.22;color:var(--sepia);
+  letter-spacing:-.013em;quotes:"«" "»"}
+.rev .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.rev .ava{width:40px;height:40px;border-radius:70px;background:var(--soft-cream);flex:none;
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;color:var(--sepia)}
+.rev .who b{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--sepia);display:block}
+.rev .who span{font-size:12px;color:var(--driftwood)}
 
-/* ---------- контакты ---------- */
-.contacts{display:grid;grid-template-columns:1.1fr .9fr;gap:76px;align-items:start}
-.links a{display:flex;justify-content:space-between;align-items:center;gap:24px;
-  padding:20px 0;border-top:1px solid var(--hairline);font-size:23px;letter-spacing:-.23px;
-  transition:padding-left .25s ease}
-.links a:last-child{border-bottom:1px solid var(--hairline)}
-.links a span{font-size:16px;color:var(--muted);transition:color .2s ease}
-.links a:hover{padding-left:12px}
-.links a:hover span{color:var(--light-green)}
-.wholesale{background:var(--off-black);border-radius:8px;padding:32px}
-.wholesale h3{font-size:34px;line-height:1.2;letter-spacing:-.34px}
-.wholesale p{margin-top:16px;font-size:16px;line-height:1.4;color:var(--muted)}
-.wholesale .cta{margin-top:32px}
+/* контакты */
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.links{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:8px 24px}
+.links a{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0;
+  border-bottom:1px solid var(--pebble);font-size:17px;color:var(--sepia);transition:padding-left .2s ease}
+.links a:last-child{border-bottom:0}
+.links a span{font-size:14px;color:var(--driftwood);transition:color .18s ease}
+.links a:hover{padding-left:8px}
+.links a:hover span{color:var(--ember)}
+.wholesale{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:32px;
+  display:flex;flex-direction:column;align-items:flex-start}
+.wholesale h3{font-size:40px;line-height:1.2;letter-spacing:-.02em}
+.wholesale p{margin-top:12px}
+.wholesale .mono{margin-top:16px;color:var(--driftwood)}
+.wholesale .btn{margin-top:24px}
 
-/* ---------- подвал ---------- */
-footer.site{background:var(--off-black);border-top:1px solid var(--hairline);padding:76px 0 32px}
-.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
-.foot img{height:28px;width:auto}
-.foot .bracket{margin-top:24px;color:var(--muted)}
-.foot h4{font-size:16px;font-weight:400;color:var(--muted)}
-.foot ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
-.foot ul a{font-size:16px;color:var(--cream);transition:opacity .2s ease}
-.foot ul a:hover{opacity:.65}
-.foot-base{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
-  margin-top:76px;padding-top:24px;border-top:1px solid var(--hairline);font-size:14px;color:var(--muted)}
+/* подвал */
+footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padding:64px 0 24px}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.foot img{height:26px;width:auto}
+.foot .tag{margin-top:12px;font-size:14px;color:var(--bronze);max-width:26ch}
+.foot h4{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--driftwood)}
+.foot ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.foot ul a{font-size:14px;color:var(--sepia)}
+.foot ul a:hover{color:var(--ember)}
+.foot-base{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:48px;
+  padding-top:20px;border-top:1px solid var(--pebble);font-size:13px;color:var(--driftwood)}
+
+/* ---------- ниже 1180: созвездие превращается в ряд карточек ---------- */
+@media (max-width:1180px){
+  .orbit{position:static;pointer-events:auto}
+  .qcard{position:static;width:auto}
+  .orbit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+  .hero{padding:64px 0}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .sets{grid-template-columns:repeat(2,1fr)}
+  .trust{grid-template-columns:1fr 1fr}
+  .portrait{grid-column:1 / -1;order:-1;min-height:340px}
+}
 
 /* ---------- планшет ---------- */
-@media (max-width:1080px){
+@media (max-width:900px){
   .wrap{width:min(var(--max),100% - 40px)}
-  :root{--pad:20px}
-  nav{display:none}
+  .nav-in{grid-template-columns:auto 1fr auto}
+  .nav-l{display:none}
+  .nav .mark{margin-inline:0}
+  .nav-r .lnk{display:none}
   #burger{display:block}
-  nav.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
-    gap:0;background:var(--black);border-bottom:1px solid var(--hairline);padding:8px 20px 20px}
-  nav.open a{padding:16px 0;border-bottom:1px solid var(--hairline);font-size:19px}
-  .bar-actions .pill{display:none}
-  .tool{grid-template-columns:1fr;gap:32px}
-  .tool-art{height:240px;justify-content:flex-start}
+  .nav-mob{flex-direction:column;gap:0;padding:0 0 16px}
+  .nav-mob.open{display:flex}
+  .nav-mob a{padding:14px 0;border-top:1px solid var(--pebble);font-size:17px;color:var(--sepia)}
+  .cols,.reasons,.steps,.reviews,.contacts{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(2,1fr)}
-  .sets{grid-template-columns:repeat(2,1fr)}
-  .about,.contacts{grid-template-columns:1fr;gap:48px}
-  .steps,.reviews{grid-template-columns:1fr}
-  .foot{grid-template-columns:1fr 1fr}
-  .hero-art{opacity:.55}
+  .ev{grid-template-columns:72px 1fr;gap:16px}
+  .ev-side{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between;
+    text-align:left;margin-top:8px}
+  .orbit-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 /* ---------- телефон ---------- */
-@media (max-width:640px){
-  body{font-size:17px}
+@media (max-width:600px){
   .wrap{width:min(var(--max),100% - 32px)}
-  section{padding:64px 0}
-  .lg{font-size:19px;line-height:1.32}
+  section{padding:56px 0}
+  .sec{margin-bottom:32px}
+  .sec h2{font-size:clamp(28px,8vw,36px)}
+  .sec p{font-size:15px;margin-top:12px}
 
-  .announce{font-size:13px;padding:10px 16px}
-  .bar{padding:10px 0;gap:10px}
-  .bar .mark{height:22px}
-  .bar-actions{order:2;margin-left:auto}
-  .bar-actions .cta{padding:10px 14px;font-size:14px;white-space:nowrap}
-  #burger{order:3;margin-left:0;width:40px;height:40px}
+  .hero{padding:48px 0 56px}
+  .hero h1{font-size:clamp(34px,11vw,48px)}
+  .hero .body-lg{font-size:15px;margin-top:20px}
+  .hero-cta{margin-top:24px;gap:10px}
+  .hero-cta .btn{flex:1 1 100%}
+  .nav-r .btn{white-space:nowrap;padding:8px 12px;font-size:13px}
+  .orbit-grid{grid-template-columns:1fr;gap:12px;margin-top:32px}
+  .qcard{flex-direction:row;align-items:center;gap:14px}
+  .qcard .who{flex:none;align-items:center}
+  .qcard .meta b{font-size:12px}
+  .qcard .meta .role{font-size:11px}
+  .qcard .ava{width:52px;height:52px}
+  .qcard .ava img{width:42px;height:42px}
+  .qcard q{font-size:14px}
 
-  .hero{padding:36px 0 56px}
-  .display{font-size:clamp(34px,10.8vw,56px);margin-top:14px;text-wrap:balance}
-  .hero-lead{font-size:19px;line-height:1.32;margin-top:24px}
-  .hero-cta{margin-top:28px;gap:10px}
-  .hero-cta .pill,.hero-cta .cta{flex:1 1 100%;justify-content:center}
-  .facts{gap:24px;margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr)}
-  .facts b{font-size:32px}
-  .facts span{font-size:13px;margin-top:6px}
-  .hero-art{position:static;opacity:1;height:auto;margin-top:28px;
-    display:flex;align-items:flex-end;justify-content:center}
-  .hero-art figure{position:relative;inset:auto;flex:none}
-  .hero-art .glow{width:180%;height:180%;filter:blur(34px)}
-  .a1{height:146px;z-index:3;transform:rotate(-9deg)}
-  .a2{height:112px;margin-inline:-16px;transform:rotate(8deg)}
-  .a3{height:118px;transform:rotate(5deg)}
-
-  .sec-top{margin-bottom:40px;display:block}
-  .sec-top h2{font-size:clamp(30px,8.4vw,40px);max-width:none}
-  .sec-top .note{margin-top:16px;max-width:none}
-
-  .tool{padding:40px 0;gap:24px}
-  .tool-art{height:180px}
-  .tool-art .glow{width:220px;height:220px}
-  .cat{font-size:24px}
-  .tool h3{font-size:30px;margin-top:12px}
-  .tool p.lg{margin-top:14px}
-  .tool .pill{margin-top:24px}
-
-  .filters{gap:6px;margin-bottom:24px}
-  .filters .pill{padding:10px 15px;font-size:15px}
   .grid{grid-template-columns:repeat(2,1fr);gap:12px}
-  .card{padding:14px}
-  .shot{height:150px;margin-bottom:16px}
-  .shot .glow{width:150px;height:150px}
-  .card h3{font-size:19px;margin-top:6px}
-  .card .cat{font-size:14px}
-  .card .phrase{font-size:14px;line-height:1.35}
-  .card-foot{flex-direction:column;align-items:stretch;gap:10px;padding-top:16px}
-  .card-foot .pill{justify-content:center;padding:10px 14px;font-size:15px}
+  .card{padding:12px}
+  .tile{height:130px;padding:10px;margin-bottom:12px}
+  .card h3{font-size:19px}
+  .card .phrase{font-size:13px}
+  .card-foot{flex-direction:column;align-items:stretch;gap:10px;padding-top:14px}
+  .card-foot .btn{width:100%}
   .price{font-size:21px}
 
   .sets{grid-template-columns:1fr;gap:12px}
-  .build{padding:24px;gap:24px}
-  .build h3{font-size:27px}
-  .build p{font-size:17px}
-  .build .pill{width:100%;justify-content:center}
-
-  .ev{grid-template-columns:64px 1fr;gap:16px;padding:24px 0}
+  .build{padding:24px}
+  .build h3{font-size:28px}
+  .build .btn{width:100%}
+  .feature{padding:20px}
+  .feature-top{gap:14px}
+  .feature-art{width:72px;height:72px}
+  .feature h3{font-size:21px}
+  .ev{padding:20px}
+  .ev h3{font-size:20px}
   .ev-date b{font-size:32px}
-  .ev h3{font-size:24px}
-  .ev p{margin-top:12px;font-size:17px;line-height:1.32}
-  .ev-side{grid-column:1 / -1;flex-direction:row;align-items:center;justify-content:space-between;
-    text-align:left;margin-top:20px}
-  .sign{font-size:27px}
-  .step h3{font-size:27px}
-  .rev p{font-size:19px;line-height:1.35}
-  .links a{font-size:19px;padding:16px 0}
+  .portrait{min-height:260px;padding:24px}
+  .portrait img{max-height:190px}
+  .about .sign{font-size:26px}
   .wholesale{padding:24px}
-  .wholesale h3{font-size:27px}
-  .wholesale .cta{width:100%;justify-content:center}
-  footer.site{padding:56px 0 24px}
-  .foot{grid-template-columns:1fr;gap:32px}
-  .foot-base{margin-top:48px}
+  .wholesale h3{font-size:28px}
+  .wholesale .btn{width:100%}
+  .rev q{font-size:20px}
+  .foot{grid-template-columns:1fr 1fr}
+  .foot>div:first-child{grid-column:1 / -1}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -379,15 +376,23 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
 }
 </style>
 
-<div class="announce">
-  Осенняя новинка — Pumpkin Spice Latte. <a href="#catalog">Уже в каталоге →</a>
-</div>
-
-<header>
-  <div class="wrap bar">
-    <a href="#top" aria-label="Between Pages"><img class="mark" src="assets/logo-cream.png" alt="Between Pages"></a>
-    <button id="burger" aria-label="Меню" aria-expanded="false">☰</button>
-    <nav id="nav">
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-in">
+      <div class="nav-l">
+        <a class="lnk" href="#collections">Коллекции</a>
+        <a class="lnk" href="#catalog">Каталог</a>
+        <a class="lnk" href="#sets">Наборы</a>
+      </div>
+      <a href="#top" aria-label="Between Pages"><img class="mark" src="assets/logo.png" alt="Between Pages"></a>
+      <div class="nav-r">
+        <a class="lnk" href="#events">Афиша</a>
+        <a class="lnk" href="#about">О бренде</a>
+        <a class="btn btn-soft sm" href="#catalog">Выбрать закладку</a>
+        <button id="burger" aria-label="Меню" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <nav class="nav-mob" id="navmob">
       <a href="#collections">Коллекции</a>
       <a href="#catalog">Каталог</a>
       <a href="#sets">Наборы</a>
@@ -395,215 +400,308 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
       <a href="#about">О бренде</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <div class="bar-actions">
-      <a class="pill sm" href="#events">Афиша</a>
-      <a class="cta sm" href="#catalog">Выбрать закладку</a>
-    </div>
   </div>
-</header>
+</div>
 
 <main id="top">
 
 <section class="hero">
-  <div class="hero-art" aria-hidden="true">
-    <figure class="a1"><span class="glow"></span><img src="assets/matcha.png" alt=""></figure>
-    <figure class="a2"><span class="glow"></span><img src="assets/piano.png" alt=""></figure>
-    <figure class="a3"><span class="glow"></span><img src="assets/cheers.png" alt=""></figure>
-  </div>
-  <div class="hero-inner">
-    <span class="bracket">Between Pages® · Актобе</span>
-    <h1 class="display">Между страниц<br><span class="grad">живёшь ты</span></h1>
-    <p class="hero-lead">Закладка — единственная вещь, которую читатель видит чаще обложки. <b>Мы делаем эту встречу про тебя:</b> про матчу по утрам, воскресные гонки, корт, рояль и бокал в пятницу.</p>
-    <div class="hero-cta">
-      <a class="cta" href="#catalog">Выбрать закладку</a>
-      <a class="pill" href="#events">Афиша встреч</a>
+  <div class="wrap">
+    <div class="orbit">
+      <article class="qcard q1">
+        <div class="who">
+          <span class="ava"><img src="assets/matcha.png" alt=""></span>
+          <span class="meta"><b>Matcha &amp; Books</b><span class="role">Кофейная</span></span>
+        </div>
+        <q>Для тех, кто читает медленно и пьёт зелёное</q>
+      </article>
+      <article class="qcard q2">
+        <div class="who">
+          <span class="ava"><img src="assets/car16.png" alt=""></span>
+          <span class="meta"><b>Болид №16</b><span class="role">Гонки</span></span>
+        </div>
+        <q>Для того, кто болеет сердцем</q>
+      </article>
+      <article class="qcard q3">
+        <div class="who">
+          <span class="ava"><img src="assets/tennis.png" alt=""></span>
+          <span class="meta"><b>Теннис</b><span class="role">Спорт</span></span>
+        </div>
+        <q>Гейм, сет, глава</q>
+      </article>
+      <article class="qcard q4">
+        <div class="who">
+          <span class="ava"><img src="assets/pumpkin.png" alt=""></span>
+          <span class="meta"><b>Pumpkin Spice Latte</b><span class="role">Кофейная</span></span>
+        </div>
+        <q>Осенью читается лучше. Проверено</q>
+      </article>
+      <article class="qcard q5">
+        <div class="who">
+          <span class="ava"><img src="assets/piano.png" alt=""></span>
+          <span class="meta"><b>Рояль</b><span class="role">Музыка</span></span>
+        </div>
+        <q>Читай, как играешь: не спеша</q>
+      </article>
+      <article class="qcard q6">
+        <div class="who">
+          <span class="ava"><img src="assets/cheers.png" alt=""></span>
+          <span class="meta"><b>Cheers</b><span class="role">Праздник</span></span>
+        </div>
+        <q>Дочитала — отпразднуй</q>
+      </article>
     </div>
-    <div class="facts">
-      <div><b class="tnum">8</b><span>дизайнов в первой партии</span></div>
-      <div><b class="tnum">5</b><span>коллекций по увлечениям</span></div>
-      <div><b class="tnum">2–4</b><span>дня доставки по Казахстану</span></div>
+
+    <div class="hero-mid">
+      <p class="eyebrow">Дизайнерские закладки · Актобе</p>
+      <h1>Между страниц <em>живёшь ты</em></h1>
+      <p class="body-lg">Закладка — единственная вещь, которую читатель видит чаще обложки. Мы делаем эту встречу про тебя: про матчу по утрам, воскресные гонки, корт, рояль и бокал в пятницу.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#catalog">Выбрать закладку</a>
+        <a class="btn btn-ghost" href="#events">Посмотреть афишу</a>
+      </div>
+      <p class="hero-note mono">50 × 150 мм · 350 г/м² · доставка 2–4 дня</p>
     </div>
+
+    <div class="orbit-grid" id="orbitGrid"></div>
   </div>
 </section>
 
-<div class="strip"><div class="strip-track" id="strip"></div></div>
+<section class="band" id="why">
+  <div class="wrap">
+    <div class="sec">
+      <p class="eyebrow">Почему Between Pages</p>
+      <h2>Закладка про человека,<br><em>а не про книги вообще</em></h2>
+      <p>Конкуренты печатают котов, кофе и цитаты. Мы печатаем то, чем ты занят между главами — и поэтому закладку узнают в руках.</p>
+    </div>
+    <div class="reasons">
+      <div class="reason">
+        <h3>Про увлечения</h3>
+        <p class="body">Пять коллекций собраны не по жанрам книг, а по тому, чем человек живёт: матча, гонки, корт, рояль, пятничный бокал.</p>
+      </div>
+      <div class="reason">
+        <h3>Держит форму</h3>
+        <p class="body">Плотный картон с матовой ламинацией и стикер-вырубкой. Не мнётся в сумке, углы не лохматятся, цвет не выцветает.</p>
+      </div>
+      <div class="reason">
+        <h3>Готовый подарок</h3>
+        <p class="body">Крафт-конверт с логотипом и открытка, подписанная от руки. Ничего не нужно докупать и заворачивать.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="collections">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Коллекции</span>
-        <h2>Не по жанрам книг — по тому, чем ты живёшь</h2>
-      </div>
-      <p class="note">У каждой коллекции свой цвет. Он же ведёт её через каталог, наборы и афишу.</p>
+    <div class="sec">
+      <p class="eyebrow">Коллекции</p>
+      <h2>Не по жанрам книг —<br><em>по тому, чем ты живёшь</em></h2>
+      <p>Пять коллекций первой партии. Нажми на состав — каталог отфильтруется.</p>
     </div>
+    <div class="cols">
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/matcha.png" alt="Закладка «Matcha &amp; Books»"></span>
+          <div>
+            <h3>Кофейная</h3>
+            <p class="body lead">Глоток. Страница. Повтор. Для тех, кто читает медленно и не торопит утро.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">В коллекции</p>
+          <p class="line">Matcha &amp; Books · Pumpkin Spice Latte — <b>от 1 500 ₸</b></p>
+          <button class="go" data-jump="coffee">→ Показать в каталоге</button>
+        </div>
+      </article>
 
-    <article class="tool" style="--hue:var(--light-green)">
-      <div class="tool-art"><span class="glow"></span><img src="assets/matcha.png" alt="Закладка «Matcha &amp; Books»"></div>
-      <div>
-        <p class="cat">Кофейная</p>
-        <h3>Глоток. Страница. Повтор.</h3>
-        <p class="lg">Матча со льдом и тыквенный латте — для тех, кто читает медленно и не торопит утро.</p>
-        <button class="pill" data-jump="coffee">Смотреть коллекцию</button>
-      </div>
-    </article>
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/car16.png" alt="Закладка «Болид №16»"></span>
+          <div>
+            <h3>Гонки</h3>
+            <p class="body lead">Пауза на пит-стоп, дочитаю после финиша. Болиды видом сверху, как на телеметрии.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">В коллекции</p>
+          <p class="line">Болид №16 · Болид №44 — <b>от 1 500 ₸</b></p>
+          <button class="go" data-jump="race">→ Показать в каталоге</button>
+        </div>
+      </article>
 
-    <article class="tool" style="--hue:var(--orange)">
-      <div class="tool-art"><span class="glow"></span><img src="assets/car16.png" alt="Закладка «Болид №16»"></div>
-      <div>
-        <p class="cat">Гонки</p>
-        <h3>Пауза на пит-стоп. Дочитаю после финиша.</h3>
-        <p class="lg">Болиды №16 и №44 — вид сверху, как на телеметрии. Подарок тому, кто болеет сердцем.</p>
-        <button class="pill" data-jump="race">Смотреть коллекцию</button>
-      </div>
-    </article>
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/gloves.png" alt="Закладка «Боксёрские перчатки»"></span>
+          <div>
+            <h3>Спорт</h3>
+            <p class="body lead">Тренировка для тела — книга для головы. Перчатки на шнурках и ретро-ракетка.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">В коллекции</p>
+          <p class="line">Боксёрские перчатки · Теннис — <b>от 1 600 ₸</b></p>
+          <button class="go" data-jump="sport">→ Показать в каталоге</button>
+        </div>
+      </article>
 
-    <article class="tool" style="--hue:var(--blue)">
-      <div class="tool-art"><span class="glow"></span><img src="assets/gloves.png" alt="Закладка «Боксёрские перчатки»"></div>
-      <div>
-        <p class="cat">Спорт</p>
-        <h3>Тренировка для тела — книга для головы.</h3>
-        <p class="lg">Перчатки на шнурках и ретро-ракетка. Для тех, у кого после зала — глава перед сном.</p>
-        <button class="pill" data-jump="sport">Смотреть коллекцию</button>
-      </div>
-    </article>
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/piano.png" alt="Закладка «Рояль»"></span>
+          <div>
+            <h3>Музыка</h3>
+            <p class="body lead">Каждая глава — новая партия. Чёрный рояль сверху, золотая окантовка и ноты.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">В коллекции</p>
+          <p class="line">Рояль — <b>1 700 ₸</b></p>
+          <button class="go" data-jump="music">→ Показать в каталоге</button>
+        </div>
+      </article>
 
-    <article class="tool" style="--hue:var(--lilac)">
-      <div class="tool-art"><span class="glow"></span><img src="assets/piano.png" alt="Закладка «Рояль»"></div>
-      <div>
-        <p class="cat">Музыка</p>
-        <h3>Каждая глава — новая партия.</h3>
-        <p class="lg">Чёрный рояль сверху, золотая окантовка и ноты. Читай, как играешь: не спеша.</p>
-        <button class="pill" data-jump="music">Смотреть коллекцию</button>
-      </div>
-    </article>
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/cheers.png" alt="Закладка «Cheers»"></span>
+          <div>
+            <h3>Праздник</h3>
+            <p class="body lead">За книги, которые дочитали. Бутылка с розовым бантом, бокал и надпись Cheers.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">В коллекции</p>
+          <p class="line">Cheers — <b>1 700 ₸</b></p>
+          <button class="go" data-jump="party">→ Показать в каталоге</button>
+        </div>
+      </article>
 
-    <article class="tool" style="--hue:var(--pink)">
-      <div class="tool-art"><span class="glow"></span><img src="assets/cheers.png" alt="Закладка «Cheers»"></div>
-      <div>
-        <p class="cat">Праздник</p>
-        <h3>За книги, которые дочитали.</h3>
-        <p class="lg">Бутылка с розовым бантом и бокал. Закладка, которую дарят вместе с последней страницей.</p>
-        <button class="pill" data-jump="party">Смотреть коллекцию</button>
-      </div>
-    </article>
+      <article class="feature">
+        <div class="feature-top">
+          <span class="feature-art"><img src="assets/pumpkin.png" alt="Осенняя закладка"></span>
+          <div>
+            <h3>Что дальше</h3>
+            <p class="body lead">Готовим зимнюю капсулу и серию «Цитаты». Подписывайся — покажем первыми.</p>
+          </div>
+        </div>
+        <div class="inner-card">
+          <p class="lbl">Скоро</p>
+          <p class="line">Какао и гирлянда · Гитара · Чемодан — <b>декабрь 2026</b></p>
+          <a class="go" href="https://instagram.com/betweenpages">→ Следить в Instagram</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<section id="catalog">
+<section class="band" id="catalog">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Каталог</span>
-        <h2>Восемь закладок первой партии</h2>
-      </div>
-      <p class="note">50 × 150 мм · плотный картон 350 г/м² · матовая ламинация · стикер-вырубка</p>
+    <div class="sec">
+      <p class="eyebrow">Каталог</p>
+      <h2>Восемь закладок<br><em>первой партии</em></h2>
+      <p>50 × 150 мм, плотный картон 350 г/м², матовая ламинация, стикер-вырубка со скруглёнными углами.</p>
     </div>
 
     <div class="filters" id="filters">
-      <button class="pill sm" data-f="all" aria-pressed="true">Все</button>
-      <button class="pill sm dim" data-f="coffee" aria-pressed="false">Кофейная</button>
-      <button class="pill sm dim" data-f="race" aria-pressed="false">Гонки</button>
-      <button class="pill sm dim" data-f="sport" aria-pressed="false">Спорт</button>
-      <button class="pill sm dim" data-f="music" aria-pressed="false">Музыка</button>
-      <button class="pill sm dim" data-f="party" aria-pressed="false">Праздник</button>
+      <button class="chip" data-f="all" aria-pressed="true">Все</button>
+      <button class="chip" data-f="coffee" aria-pressed="false">Кофейная</button>
+      <button class="chip" data-f="race" aria-pressed="false">Гонки</button>
+      <button class="chip" data-f="sport" aria-pressed="false">Спорт</button>
+      <button class="chip" data-f="music" aria-pressed="false">Музыка</button>
+      <button class="chip" data-f="party" aria-pressed="false">Праздник</button>
     </div>
 
     <div class="grid" id="grid">
-      <article class="card" data-c="coffee" style="--hue:var(--light-green)">
-        <div class="shot"><span class="glow"></span><img src="assets/matcha.png" alt="Закладка «Matcha &amp; Books»"></div>
-        <p class="cat">Кофейная</p>
+      <article class="card" data-c="coffee">
+        <div class="tile"><img src="assets/matcha.png" alt="Закладка «Matcha &amp; Books»"></div>
+        <p class="tag">Кофейная</p>
         <h3>Matcha &amp; Books</h3>
         <p class="phrase">Для тех, кто читает медленно и пьёт зелёное</p>
-        <div class="card-foot"><span class="price">1 500 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 500 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="coffee" style="--hue:var(--light-green)">
-        <div class="shot"><span class="glow"></span><img src="assets/pumpkin.png" alt="Закладка «Pumpkin Spice Latte»"></div>
-        <p class="cat">Кофейная</p>
+      <article class="card" data-c="coffee">
+        <div class="tile"><img src="assets/pumpkin.png" alt="Закладка «Pumpkin Spice Latte»"></div>
+        <p class="tag">Кофейная</p>
         <h3>Pumpkin Spice Latte</h3>
         <p class="phrase">Осенью читается лучше. Проверено</p>
-        <div class="card-foot"><span class="price">1 500 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 500 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="race" style="--hue:var(--orange)">
-        <div class="shot"><span class="glow"></span><img src="assets/car16.png" alt="Закладка «Болид №16»"></div>
-        <p class="cat">Гонки</p>
+      <article class="card" data-c="race">
+        <div class="tile"><img src="assets/car16.png" alt="Закладка «Болид №16»"></div>
+        <p class="tag">Гонки</p>
         <h3>Болид №16</h3>
         <p class="phrase">Для того, кто болеет сердцем</p>
-        <div class="card-foot"><span class="price">1 500 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 500 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="race" style="--hue:var(--orange)">
-        <div class="shot"><span class="glow"></span><img src="assets/car44.png" alt="Закладка «Болид №44»"></div>
-        <p class="cat">Гонки</p>
+      <article class="card" data-c="race">
+        <div class="tile"><img src="assets/car44.png" alt="Закладка «Болид №44»"></div>
+        <p class="tag">Гонки</p>
         <h3>Болид №44</h3>
         <p class="phrase">Для того, кто верит в рекорды</p>
-        <div class="card-foot"><span class="price">1 500 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 500 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="sport" style="--hue:var(--blue)">
-        <div class="shot"><span class="glow"></span><img src="assets/gloves.png" alt="Закладка «Боксёрские перчатки»"></div>
-        <p class="cat">Спорт</p>
+      <article class="card" data-c="sport">
+        <div class="tile"><img src="assets/gloves.png" alt="Закладка «Боксёрские перчатки»"></div>
+        <p class="tag">Спорт</p>
         <h3>Боксёрские перчатки</h3>
         <p class="phrase">Сегодня — раунд с книгой</p>
-        <div class="card-foot"><span class="price">1 600 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 600 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="sport" style="--hue:var(--blue)">
-        <div class="shot"><span class="glow"></span><img src="assets/tennis.png" alt="Закладка «Теннис»"></div>
-        <p class="cat">Спорт</p>
+      <article class="card" data-c="sport">
+        <div class="tile"><img src="assets/tennis.png" alt="Закладка «Теннис»"></div>
+        <p class="tag">Спорт</p>
         <h3>Теннис</h3>
         <p class="phrase">Гейм, сет, глава</p>
-        <div class="card-foot"><span class="price">1 600 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 600 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="music" style="--hue:var(--lilac)">
-        <div class="shot"><span class="glow"></span><img src="assets/piano.png" alt="Закладка «Рояль»"></div>
-        <p class="cat">Музыка</p>
+      <article class="card" data-c="music">
+        <div class="tile"><img src="assets/piano.png" alt="Закладка «Рояль»"></div>
+        <p class="tag">Музыка</p>
         <h3>Рояль</h3>
         <p class="phrase">Читай, как играешь: не спеша</p>
-        <div class="card-foot"><span class="price">1 700 ₸</span><button class="pill sm dim">Забрать себе</button></div>
+        <div class="card-foot"><span class="price">1 700 ₸</span><button class="btn btn-ghost sm">Забрать себе</button></div>
       </article>
 
-      <article class="card" data-c="party" style="--hue:var(--pink)">
-        <div class="shot"><span class="glow"></span><img src="assets/cheers.png" alt="Закладка «Cheers»"></div>
-        <p class="cat">Праздник</p>
+      <article class="card" data-c="party">
+        <div class="tile"><img src="assets/cheers.png" alt="Закладка «Cheers»"></div>
+        <p class="tag">Праздник</p>
         <h3>Cheers</h3>
         <p class="phrase">Дочитала — отпразднуй</p>
-        <div class="card-foot"><span class="price">1 700 ₸</span><button class="pill sm dim">Подарить</button></div>
+        <div class="card-foot"><span class="price">1 700 ₸</span><button class="btn btn-ghost sm">Подарить</button></div>
       </article>
     </div>
-    <p id="empty" class="lg" hidden>Здесь пока пусто. Как страница перед первой главой.</p>
+    <p id="empty" class="body" hidden>Здесь пока пусто. Как страница перед первой главой.</p>
   </div>
 </section>
 
 <section id="sets">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Наборы и подарки</span>
-        <h2>Две закладки в крафт-конверте</h2>
-      </div>
-      <p class="note">Открытку подписываем от руки — бесплатно.</p>
+    <div class="sec">
+      <p class="eyebrow">Наборы и подарки</p>
+      <h2>Две закладки<br><em>в крафт-конверте</em></h2>
+      <p>Открытку подписываем от руки — бесплатно. Набор дешевле, чем две закладки по отдельности.</p>
     </div>
     <div class="sets">
-      <div class="set" style="--hue:var(--light-green)">
+      <div class="set">
         <h3>Кофейный перерыв</h3>
         <ul><li>Matcha &amp; Books</li><li>Pumpkin Spice Latte</li></ul>
         <div class="set-foot"><span class="price">2 700 ₸</span><span class="was">3 000 ₸</span></div>
       </div>
-      <div class="set" style="--hue:var(--orange)">
+      <div class="set">
         <h3>Пит-стоп</h3>
         <ul><li>Болид №16</li><li>Болид №44</li></ul>
         <div class="set-foot"><span class="price">2 700 ₸</span><span class="was">3 000 ₸</span></div>
       </div>
-      <div class="set" style="--hue:var(--blue)">
+      <div class="set">
         <h3>Спортзал для головы</h3>
         <ul><li>Боксёрские перчатки</li><li>Теннис</li></ul>
         <div class="set-foot"><span class="price">2 900 ₸</span><span class="was">3 200 ₸</span></div>
       </div>
-      <div class="set" style="--hue:var(--lilac)">
+      <div class="set">
         <h3>Вечер</h3>
         <ul><li>Рояль</li><li>Cheers</li></ul>
         <div class="set-foot"><span class="price">3 100 ₸</span><span class="was">3 400 ₸</span></div>
@@ -611,147 +709,184 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
       <div class="build">
         <div>
           <h3>Собери свой набор</h3>
-          <p>Любые три закладки — минус 15%. Напиши номера, остальное сделаем мы.</p>
+          <p class="body">Любые три закладки — минус 15%. Напиши номера, остальное сделаем мы: подберём конверт, подпишем открытку и отправим в тот же день.</p>
+          <p class="mono" style="margin-top:12px;color:var(--driftwood)">3 закладки · −15% · от 3 825 ₸</p>
         </div>
-        <a class="pill on-cream" href="https://wa.me/77000000000">Собрать в WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/77000000000">Собрать в WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="events">
+<section class="band" id="events">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Афиша · осень — зима 2026</span>
-        <h2>Где нас встретить</h2>
-      </div>
-      <p class="note">Приходи с книгой — закладка уже ждёт внутри.</p>
+    <div class="sec">
+      <p class="eyebrow">Афиша · осень — зима 2026</p>
+      <h2>Где нас встретить<br><em>этой осенью</em></h2>
+      <p>Клубы, маркеты и мастерские в Актобе. Приходи с книгой — закладка уже ждёт внутри.</p>
     </div>
     <div class="events">
       <article class="ev">
-        <div class="ev-date"><b>20</b><span>СЕН</span></div>
+        <div class="ev-date"><b>20</b><span>сен</span></div>
         <div>
           <h3>Книжный клуб «Первая глава»</h3>
-          <p class="ev-kind">Клуб</p>
+          <p class="kind">Клуб</p>
           <p>Обсуждаем «Мартина Идена». Читать целиком не обязательно — приходи хотя бы с первой главой и своим мнением.</p>
           <div class="ev-meta"><span>Кофейня <b>Бариста</b>, пр. Абилкайыр хана 40</span><span><b>18:00</b> — 20:30</span><span>Вход <b>свободный</b></span></div>
         </div>
-        <div class="ev-side"><span class="seats">12 из 20 мест</span><a class="pill sm" href="#contacts">Записаться</a></div>
+        <div class="ev-side"><span class="seats">12 из 20 мест</span><a class="btn btn-ghost sm" href="#contacts">Записаться</a></div>
       </article>
 
       <article class="ev">
-        <div class="ev-date"><b>04</b><span>ОКТ</span></div>
+        <div class="ev-date"><b>04</b><span>окт</span></div>
         <div>
           <h3>Маркет «Осенний двор»</h3>
-          <p class="ev-kind">Маркет</p>
+          <p class="kind">Маркет</p>
           <p>Наш стол с полной коллекцией, наборами и осенней новинкой Pumpkin Spice Latte. Печатаем имя на закладке прямо на месте.</p>
           <div class="ev-meta"><span>ТРЦ <b>Керуен-Сити</b>, атриум</span><span><b>11:00</b> — 19:00</span><span>Стол <b>№14</b></span></div>
         </div>
-        <div class="ev-side"><span class="seats">Без записи</span><a class="pill sm" href="#contacts">Как найти</a></div>
+        <div class="ev-side"><span class="seats">Без записи</span><a class="btn btn-ghost sm" href="#contacts">Как найти</a></div>
       </article>
 
       <article class="ev">
-        <div class="ev-date"><b>18</b><span>ОКТ</span></div>
+        <div class="ev-date"><b>18</b><span>окт</span></div>
         <div>
           <h3>Мастерская «Собери свой набор»</h3>
-          <p class="ev-kind">Воркшоп</p>
+          <p class="kind">Воркшоп</p>
           <p>Два часа за большим столом: выбираешь три дизайна, подписываешь открытку, собираешь конверт. Набор уносишь с собой.</p>
           <div class="ev-meta"><span>Библиотека <b>им. С. Баишева</b></span><span><b>15:00</b> — 17:00</span><span><b>3 500 ₸</b> с набором</span></div>
         </div>
-        <div class="ev-side"><span class="seats few">Осталось 4 места</span><a class="cta sm" href="#contacts">Забронировать</a></div>
+        <div class="ev-side"><span class="seats few">Осталось 4 места</span><a class="btn btn-primary sm" href="#contacts">Забронировать</a></div>
       </article>
 
       <article class="ev">
-        <div class="ev-date"><b>01</b><span>НОЯ</span></div>
+        <div class="ev-date"><b>01</b><span>ноя</span></div>
         <div>
           <h3>Тихое чтение</h3>
-          <p class="ev-kind">Silent party</p>
+          <p class="kind">Silent party</p>
           <p>Час полной тишины со своей книгой, потом чай и разговоры о прочитанном. Телефоны — в коробку у входа.</p>
           <div class="ev-meta"><span>Книжный <b>Меломан</b>, второй этаж</span><span><b>19:00</b> — 21:00</span><span>Закладка <b>в подарок</b></span></div>
         </div>
-        <div class="ev-side"><span class="seats">8 из 30 мест</span><a class="pill sm" href="#contacts">Записаться</a></div>
+        <div class="ev-side"><span class="seats">8 из 30 мест</span><a class="btn btn-ghost sm" href="#contacts">Записаться</a></div>
       </article>
 
       <article class="ev">
-        <div class="ev-date"><b>06</b><span>ДЕК</span></div>
+        <div class="ev-date"><b>06</b><span>дек</span></div>
         <div>
           <h3>Новогодний маркет подарков</h3>
-          <p class="ev-kind">Маркет</p>
+          <p class="kind">Маркет</p>
           <p>Зимняя капсула, подарочные наборы «Вечер» и «Cheers», упаковка с лентой. Соберём подарок книголюбу за пять минут.</p>
           <div class="ev-meta"><span><b>Actobe Expo</b>, павильон 2</span><span><b>10:00</b> — 20:00</span><span>Два дня, <b>6–7 дек</b></span></div>
         </div>
-        <div class="ev-side"><span class="seats">Без записи</span><a class="pill sm" href="#contacts">Напомнить мне</a></div>
+        <div class="ev-side"><span class="seats">Без записи</span><a class="btn btn-ghost sm" href="#contacts">Напомнить мне</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section id="quality">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">О бренде</span>
-        <h2>Маленькая вещь. Большая история.</h2>
+    <div class="sec">
+      <p class="eyebrow">Из чего сделано</p>
+      <h2>Печатаем небольшими тиражами<br><em>и проверяем каждую партию</em></h2>
+      <p>Никакого тонкого картона и глянца, который залапывается. Одна закладка живёт дольше, чем книга, в которой лежит.</p>
+    </div>
+    <div class="trust">
+      <div class="trust-col">
+        <div class="spec-card">
+          <h3>Основа</h3>
+          <p class="body">Плотный картон, который не сгибается пополам в сумке и держит форму до конца книги.</p>
+          <p class="mono">350 г/м²</p>
+        </div>
+        <div class="spec-card">
+          <h3>Покрытие</h3>
+          <p class="body">Матовая ламинация: не бликует на фото, не собирает отпечатки, не выцветает на солнце.</p>
+          <p class="mono">matte · soft touch</p>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="assets/matcha.png" alt="Закладка «Matcha &amp; Books» крупным планом">
+        <div class="cap">
+          <b>Matcha &amp; Books</b>
+          <span>Коллекция «Кофейная» · тираж 100 шт.</span>
+        </div>
+      </div>
+      <div class="trust-col">
+        <div class="spec-card">
+          <h3>Контур</h3>
+          <p class="body">Стикер-вырубка по силуэту иллюстрации с белой обводкой и скруглёнными углами.</p>
+          <p class="mono">50 × 150 мм · R4</p>
+        </div>
+        <div class="spec-card">
+          <h3>Упаковка</h3>
+          <p class="body">Крафт-конверт с логотипом. В наборах — открытка, подписанная от руки.</p>
+          <p class="mono">крафт · 120 г/м²</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="about">
+  <div class="wrap">
+    <div class="sec">
+      <p class="eyebrow">О бренде</p>
+      <h2>Маленькая вещь.<br><em>Большая история.</em></h2>
+    </div>
     <div class="about">
-      <div>
-        <p class="lg">Between Pages родился из простого наблюдения: <b>закладка — единственная вещь, которую читатель видит чаще, чем обложку.</b> Каждый раз, открывая книгу, ты встречаешься с ней.</p>
-        <p class="lg">Мы решили, что эта встреча должна быть про тебя. Не про «книги вообще», а про твою матчу по утрам, твоё воскресенье у экрана с гонками, твой корт, твой рояль, твой бокал в пятницу вечером.</p>
-        <p class="lg">Каждая закладка — плотная иллюстрация в стикер-стиле, которая не мнётся и не выцветает. Печатаем небольшими тиражами в Актобе и отправляем по всему Казахстану.</p>
-        <p class="sign">Отметь страницу. Отметь себя.</p>
-      </div>
-      <dl class="specs">
-        <div><dt>Размер</dt><dd>50 × 150 мм</dd></div>
-        <div><dt>Основа</dt><dd>Плотный картон 350 г/м²</dd></div>
-        <div><dt>Покрытие</dt><dd>Матовая ламинация</dd></div>
-        <div><dt>Контур</dt><dd>Стикер-вырубка, белая обводка</dd></div>
-        <div><dt>Углы</dt><dd>Скруглённые, 4 мм</dd></div>
-        <div><dt>Упаковка</dt><dd>Крафт-конверт с логотипом</dd></div>
-        <div><dt>Тираж</dt><dd>50–100 шт. на дизайн</dd></div>
-      </dl>
+      <p class="body-lg">Between Pages родился из простого наблюдения: закладка — единственная вещь, которую читатель видит чаще, чем обложку. Каждый раз, открывая книгу, ты встречаешься с ней.</p>
+      <p class="body-lg">Мы решили, что эта встреча должна быть про тебя. Не про «книги вообще», а про твою матчу по утрам, твоё воскресенье у экрана с гонками, твой корт, твой рояль, твой бокал в пятницу вечером.</p>
+      <p class="body-lg">Каждая закладка — плотная иллюстрация в стикер-стиле, которая не мнётся и не выцветает. Печатаем небольшими тиражами в Актобе и отправляем по всему Казахстану.</p>
+      <p class="sign">Отметь страницу. Отметь себя.</p>
     </div>
   </div>
 </section>
 
 <section id="order">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Как заказать</span>
-        <h2>Три шага — и закладка в пути</h2>
-      </div>
-      <p class="note">Оплата Kaspi (QR или перевод). Доставка Казпочтой или курьером.</p>
+    <div class="sec">
+      <p class="eyebrow">Как заказать</p>
+      <h2>Три шага —<br><em>и закладка в пути</em></h2>
+      <p>Оплата Kaspi по QR или переводом. Доставка Казпочтой и курьером, самовывоз в Актобе.</p>
     </div>
     <div class="steps">
-      <div class="step"><b>Шаг 01</b><h3>Выбери</h3><p>Отметь закладки или готовый набор. Не можешь решить — напиши, чем человек увлекается, подберём вместе.</p></div>
-      <div class="step"><b>Шаг 02</b><h3>Напиши</h3><p>WhatsApp, Telegram или Instagram. Подтверждаем состав, адрес и способ доставки, присылаем Kaspi QR.</p></div>
-      <div class="step"><b>Шаг 03</b><h3>Получи</h3><p>Актобе — самовывоз или курьер в день заказа. По Казахстану — Казпочта, 2–4 дня, трек-номер сразу после отправки.</p></div>
+      <div class="step">
+        <p class="n">01</p>
+        <h3>Выбери</h3>
+        <p class="body">Отметь закладки или готовый набор. Не можешь решить — напиши, чем человек увлекается, подберём вместе.</p>
+      </div>
+      <div class="step">
+        <p class="n">02</p>
+        <h3>Напиши</h3>
+        <p class="body">WhatsApp, Telegram или Instagram. Подтверждаем состав, адрес и способ доставки, присылаем Kaspi QR.</p>
+      </div>
+      <div class="step">
+        <p class="n">03</p>
+        <h3>Получи</h3>
+        <p class="body">Актобе — самовывоз или курьер в день заказа. По Казахстану — Казпочта, 2–4 дня, трек-номер сразу после отправки.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="reviews">
+<section class="band" id="reviews">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Отзывы</span>
-        <h2>Что пишут в директ</h2>
-      </div>
+    <div class="sec">
+      <p class="eyebrow">Отзывы</p>
+      <h2>Что пишут<br><em>в директ</em></h2>
     </div>
     <div class="reviews">
       <div class="rev">
-        <p>«Купила “Матчу” себе и “Болид №44” мужу. Он не читал полгода — теперь дочитывает вторую книгу, только чтобы переставлять закладку».</p>
-        <footer>Айгерим · Актобе</footer>
+        <q>Купила «Матчу» себе и «Болид №44» мужу. Он не читал полгода — теперь дочитывает вторую книгу, только чтобы переставлять закладку.</q>
+        <div class="who"><span class="ava">А</span><span><b>Айгерим</b><span>Актобе</span></span></div>
       </div>
       <div class="rev">
-        <p>«Плотная, не гнётся в сумке, углы не лохматятся. За месяц выглядит как новая — а я таскаю книгу везде».</p>
-        <footer>Данияр · Алматы</footer>
+        <q>Плотная, не гнётся в сумке, углы не лохматятся. За месяц выглядит как новая — а я таскаю книгу везде.</q>
+        <div class="who"><span class="ava">Д</span><span><b>Данияр</b><span>Алматы</span></span></div>
       </div>
       <div class="rev">
-        <p>«Взяли набор “Вечер” для книжного клуба на 12 человек. Упаковали в крафт с подписью от руки — девочки визжали».</p>
-        <footer>Клуб «Первая глава»</footer>
+        <q>Взяли набор «Вечер» для книжного клуба на 12 человек. Упаковали в крафт с подписью от руки — девочки визжали.</q>
+        <div class="who"><span class="ava">П</span><span><b>Клуб «Первая глава»</b><span>Актобе</span></span></div>
       </div>
     </div>
   </div>
@@ -759,11 +894,9 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
 
 <section id="contacts">
   <div class="wrap">
-    <div class="sec-top">
-      <div>
-        <span class="bracket">Контакты</span>
-        <h2>Напиши — ответим в течение дня</h2>
-      </div>
+    <div class="sec">
+      <p class="eyebrow">Контакты</p>
+      <h2>Напиши — ответим<br><em>в течение дня</em></h2>
     </div>
     <div class="contacts">
       <div class="links">
@@ -775,8 +908,9 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
       </div>
       <div class="wholesale">
         <h3>Кофейням, клубам и библиотекам</h3>
-        <p>Печатаем закладки с вашим логотипом от 50 штук: ваш дизайн или наш на выбор, срок — 7 дней. Отдельная цена, макет за наш счёт.</p>
-        <a class="cta" href="https://wa.me/77000000000">Запросить прайс</a>
+        <p class="body">Печатаем закладки с вашим логотипом: ваш дизайн или наш на выбор, макет за наш счёт.</p>
+        <p class="mono">от 50 шт. · срок 7 дней</p>
+        <a class="btn btn-primary" href="https://wa.me/77000000000">Запросить прайс</a>
       </div>
     </div>
   </div>
@@ -788,8 +922,8 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
   <div class="wrap">
     <div class="foot">
       <div>
-        <img src="assets/logo-cream.png" alt="Between Pages">
-        <span class="bracket">Найди меня между страниц</span>
+        <img src="assets/logo.png" alt="Between Pages">
+        <p class="tag">Закладки, которые говорят о тебе больше, чем книга в руках.</p>
       </div>
       <div>
         <h4>Каталог</h4>
@@ -825,13 +959,18 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
 
 <script>
 (function(){
-  var lines = ["Одна страница в день — это 365 страниц в год","Ты не отстал. Ты просто на другой главе","Закрой вкладки. Открой книгу","Медленно — тоже вперёд","Начни главу. Остальное приложится","Между страницами всегда есть место для тебя"];
-  var strip = document.getElementById('strip');
-  var html = lines.map(function(t){return '<span>' + t + '</span>';}).join('');
-  strip.innerHTML = html + html;
+  // на узких экранах созвездие карточек становится обычной сеткой
+  var orbit = document.querySelector('.orbit'), grid = document.getElementById('orbitGrid');
+  function place(){
+    var narrow = window.matchMedia('(max-width:1180px)').matches;
+    var host = narrow ? grid : orbit;
+    [].slice.call(document.querySelectorAll('.qcard')).forEach(function(c){ host.appendChild(c); });
+  }
+  place();
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(place, 150); });
 
   var cards = [].slice.call(document.querySelectorAll('#grid .card'));
-  var buttons = [].slice.call(document.querySelectorAll('#filters button'));
+  var chips = [].slice.call(document.querySelectorAll('#filters .chip'));
   var empty = document.getElementById('empty');
 
   function apply(f){
@@ -841,14 +980,10 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
       c.classList.toggle('hide', !on);
       if(on) shown++;
     });
-    buttons.forEach(function(b){
-      var active = b.dataset.f === f;
-      b.setAttribute('aria-pressed', String(active));
-      b.classList.toggle('dim', !active);
-    });
+    chips.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.f === f)); });
     empty.hidden = shown > 0;
   }
-  buttons.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.f); }); });
+  chips.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.f); }); });
 
   document.querySelectorAll('[data-jump]').forEach(function(b){
     b.addEventListener('click', function(){
@@ -857,15 +992,15 @@ footer.site{background:var(--off-black);border-top:1px solid var(--hairline);pad
     });
   });
 
-  var burger = document.getElementById('burger'), nav = document.getElementById('nav');
+  var burger = document.getElementById('burger'), navmob = document.getElementById('navmob');
   burger.addEventListener('click', function(){
-    var open = nav.classList.toggle('open');
+    var open = navmob.classList.toggle('open');
     burger.setAttribute('aria-expanded', String(open));
     burger.textContent = open ? '✕' : '☰';
   });
-  nav.addEventListener('click', function(e){
+  navmob.addEventListener('click', function(e){
     if(e.target.tagName === 'A'){
-      nav.classList.remove('open');
+      navmob.classList.remove('open');
       burger.textContent = '☰';
       burger.setAttribute('aria-expanded','false');
     }

@@ -6,7 +6,8 @@
 `pdftoppm -r 300`, каждая закладка вырезается скриптом, фон делается прозрачным.
 У каждой закладки две стороны — иллюстрация и карточка читателя на обороте.
 
-**Live:** https://qazaqboss.github.io/between-pages/
+**Live:** https://between-pages-vert.vercel.app/  
+**Зеркало:** https://qazaqboss.github.io/between-pages/ (GitHub Pages)
 
 Одностраничник без сборки: `index.html` + иллюстрации в `assets/`. Открывается двойным кликом,
 деплой — обычный статический хостинг или GitHub Pages.

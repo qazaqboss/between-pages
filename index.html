@@ -112,7 +112,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-of
 .hero-mid{position:relative;z-index:3;max-width:760px;margin-inline:auto}
 .hero h1{font-size:clamp(40px,6.6vw,88px);line-height:1;letter-spacing:-.03em}
 .hero h1 em{font-style:italic;color:var(--bronze)}
-.hero .body-lg{margin:24px auto 0;max-width:520px}
+.hero-lead{margin:24px auto 0;max-width:580px;display:grid;gap:14px}
+.hero-lead .last{color:var(--sepia)}
 .hero-cta{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
 .hero-note{margin-top:20px;font-size:13px;color:var(--stone)}
 
@@ -327,7 +328,8 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
 
   .hero{padding:48px 0 56px}
   .hero h1{font-size:clamp(34px,11vw,48px)}
-  .hero .body-lg{font-size:15px;margin-top:20px}
+  .hero-lead{margin-top:20px;gap:12px}
+  .hero-lead .body-lg{font-size:15px}
   .hero-cta{margin-top:24px;gap:10px}
   .hero-cta .btn{flex:1 1 100%}
   .nav-r .btn{white-space:nowrap;padding:8px 12px;font-size:13px}
@@ -547,7 +549,11 @@ body.has-cart .cart-bar{display:flex}
     <div class="hero-mid">
       <p class="eyebrow">Магнитные закладки · Алматы</p>
       <h1>Между страниц <em>живёшь ты</em></h1>
-      <p class="body-lg">Закладка — единственная вещь, которую читатель видит чаще обложки. Мы делаем эту встречу про тебя: про матчу по утрам, воскресные гонки, корт, рояль и бокал в пятницу.</p>
+      <div class="hero-lead">
+        <p class="body-lg">Закладка — маленькая деталь, которая остаётся с тобой дольше, чем ты думаешь.</p>
+        <p class="body-lg">Мы создаём их не просто про увлечения. А про то, что тебя трогает: утреннюю матчу, любовь к скорости, мечту однажды сесть за рояль, воспоминание о первом поединке или желание попробовать что-то новое.</p>
+        <p class="body-lg last">Потому что иногда одна маленькая вещь может рассказать о тебе больше, чем кажется.</p>
+      </div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#catalog">Выбрать закладку</a>
         <a class="btn btn-ghost" href="#events">Посмотреть афишу</a>

@@ -374,6 +374,12 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
 }
 
 
+.matlist{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+.matlist li{position:relative;padding-left:16px;font-family:var(--mono);font-size:13px;
+  line-height:1.4;letter-spacing:0;color:var(--bronze)}
+.matlist li::before{content:"";position:absolute;left:2px;top:8px;width:4px;height:4px;
+  border-radius:50%;background:var(--pebble)}
+
 /* счётчик количества в карточке */
 .card-foot{flex-direction:column;align-items:stretch;gap:12px}
 .card-foot .btn{width:100%}
@@ -936,9 +942,13 @@ body.has-cart .cart-bar{display:flex}
           <p class="mono">Title · Started · Finished</p>
         </div>
         <div class="spec-card">
-          <h3>Упаковка</h3>
-          <p class="body">Крафт-конверт с логотипом. В наборах — открытка, подписанная от руки.</p>
-          <p class="mono">крафт-конверт</p>
+          <h3>Материал</h3>
+          <ul class="matlist">
+            <li>бумага мелованная 200 г/м², печать односторонняя</li>
+            <li>ламинация рулонная матовая с двух сторон</li>
+            <li>кашировка на магнитную плёнку</li>
+            <li>резка на планшетном плоттере</li>
+          </ul>
         </div>
       </div>
     </div>

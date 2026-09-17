@@ -10,8 +10,8 @@
 В макете каждая закладка — пара половинок: иллюстрация и карточка читателя, которые
 смыкаются на странице.
 
-**Live:** https://between-pages-vert.vercel.app/  
-**Зеркало:** https://qazaqboss.github.io/between-pages/ (GitHub Pages)
+**Live:** https://www.betweenpages.site/  
+**Зеркала:** https://between-pages-vert.vercel.app/ (Vercel) · https://qazaqboss.github.io/between-pages/ (GitHub Pages)
 
 Одностраничник без сборки: `index.html` + иллюстрации в `assets/`. Открывается двойным кликом,
 деплой — обычный статический хостинг или GitHub Pages.

@@ -443,10 +443,6 @@ body.has-cart .cart-bar{display:flex}
 .qty button:hover{border-color:var(--driftwood)}
 .qty span{min-width:26px;text-align:center;font-size:15px;font-variant-numeric:tabular-nums}
 .drawer-foot{border-top:1px solid var(--pebble);padding:20px 24px 24px;display:grid;gap:16px}
-.ship{display:flex;gap:8px;flex-wrap:wrap}
-.ship button{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--sepia);
-  background:none;border:1px solid var(--pebble);border-radius:8px;padding:9px 14px;cursor:pointer}
-.ship button[aria-pressed="true"]{background:var(--soft-cream);border-color:var(--driftwood)}
 .total{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
 .total span{font-size:15px;color:var(--bronze)}
 .total b{font-family:var(--sans);font-size:23px;font-weight:500;color:var(--sepia);
@@ -486,7 +482,6 @@ body.has-cart .cart-bar{display:flex}
       </div>
       <a href="#top" aria-label="Between Pages"><img class="mark" src="assets/logo.png" alt="Between Pages"></a>
       <div class="nav-r">
-        <a class="lnk" href="#events">Афиша</a>
         <a class="lnk" href="#about">О бренде</a>
         <a class="btn btn-soft sm" href="#catalog">Выбрать закладку</a>
         <button id="burger" aria-label="Меню" aria-expanded="false">☰</button>
@@ -496,7 +491,6 @@ body.has-cart .cart-bar{display:flex}
       <a href="#collections">Коллекции</a>
       <a href="#catalog">Каталог</a>
       <a href="#sets">Наборы</a>
-      <a href="#events">Афиша</a>
       <a href="#about">О бренде</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -562,7 +556,6 @@ body.has-cart .cart-bar{display:flex}
       </div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#catalog">Выбрать закладку</a>
-        <a class="btn btn-ghost" href="#events">Посмотреть афишу</a>
       </div>
       <p class="hero-note mono">магнитная закладка · самовывоз или курьер</p>
     </div>
@@ -678,20 +671,6 @@ body.has-cart .cart-bar{display:flex}
         </div>
       </article>
 
-      <article class="feature">
-        <div class="feature-top">
-          <span class="feature-art"><img src="assets/pumpkin.png" alt="Осенняя закладка"></span>
-          <div>
-            <h3>Что дальше</h3>
-            <p class="body lead">Готовим зимнюю капсулу и серию «Цитаты». Подписывайся — покажем первыми.</p>
-          </div>
-        </div>
-        <div class="inner-card">
-          <p class="lbl">Скоро</p>
-          <p class="line">Какао и гирлянда · Гитара · Чемодан — <b>декабрь 2026</b></p>
-          <a class="go" href="https://instagram.com/betweenpages">→ Следить в Instagram</a>
-        </div>
-      </article>
     </div>
   </div>
 </section>
@@ -842,73 +821,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section class="band" id="events">
-  <div class="wrap">
-    <div class="sec">
-      <p class="eyebrow">Афиша · осень — зима 2026</p>
-      <h2>Где нас встретить<br><em>этой осенью</em></h2>
-      <p>Клубы, маркеты и мастерские в Алматы. Приходи с книгой — закладка уже ждёт внутри.</p>
-    </div>
-    <div class="events">
-      <article class="ev">
-        <div class="ev-date"><b>20</b><span>сен</span></div>
-        <div>
-          <h3>Книжный клуб «Первая глава»</h3>
-          <p class="kind">Клуб</p>
-          <p>Обсуждаем «Мартина Идена». Читать целиком не обязательно — приходи хотя бы с первой главой и своим мнением.</p>
-          <div class="ev-meta"><span><b>Алматы</b></span><span>Вход <b>свободный</b></span></div>
-        </div>
-        <div class="ev-side"><span class="seats">12 из 20 мест</span><a class="btn btn-ghost sm" href="#contacts">Записаться</a></div>
-      </article>
-
-      <article class="ev">
-        <div class="ev-date"><b>04</b><span>окт</span></div>
-        <div>
-          <h3>Маркет «Осенний двор»</h3>
-          <p class="kind">Маркет</p>
-          <p>Наш стол с полной коллекцией, наборами и осенней новинкой Pumpkin Spice Latte. Печатаем имя на закладке прямо на месте.</p>
-          <div class="ev-meta"><span><b>Алматы</b></span></div>
-        </div>
-        <div class="ev-side"><span class="seats">Без записи</span><a class="btn btn-ghost sm" href="#contacts">Как найти</a></div>
-      </article>
-
-      <article class="ev">
-        <div class="ev-date"><b>18</b><span>окт</span></div>
-        <div>
-          <h3>Мастерская «Собери свой набор»</h3>
-          <p class="kind">Воркшоп</p>
-          <p>За большим столом выбираешь три дизайна, подписываешь открытку, собираешь конверт. Набор уносишь с собой.</p>
-          <div class="ev-meta"><span><b>Алматы</b></span><span><b>5 000 ₸</b> с набором</span></div>
-        </div>
-        <div class="ev-side"><span class="seats few">Осталось 4 места</span><a class="btn btn-primary sm" href="#contacts">Забронировать</a></div>
-      </article>
-
-      <article class="ev">
-        <div class="ev-date"><b>01</b><span>ноя</span></div>
-        <div>
-          <h3>Тихое чтение</h3>
-          <p class="kind">Silent party</p>
-          <p>Тишина со своей книгой, потом чай и разговоры о прочитанном. Телефоны — в коробку у входа.</p>
-          <div class="ev-meta"><span><b>Алматы</b></span><span>Закладка <b>в подарок</b></span></div>
-        </div>
-        <div class="ev-side"><span class="seats">8 из 30 мест</span><a class="btn btn-ghost sm" href="#contacts">Записаться</a></div>
-      </article>
-
-      <article class="ev">
-        <div class="ev-date"><b>06</b><span>дек</span></div>
-        <div>
-          <h3>Новогодний маркет подарков</h3>
-          <p class="kind">Маркет</p>
-          <p>Зимняя капсула, подарочные наборы «Вечер» и «Cheers», упаковка с лентой. Соберём подарок книголюбу за пять минут.</p>
-          <div class="ev-meta"><span><b>Алматы</b></span><span>Два дня, <b>6–7 дек</b></span></div>
-        </div>
-        <div class="ev-side"><span class="seats">Без записи</span><a class="btn btn-ghost sm" href="#contacts">Напомнить мне</a></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="quality">
+<section class="band" id="quality">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Из чего сделано</p>
@@ -955,7 +868,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section class="band" id="about">
+<section id="about">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">О бренде</p>
@@ -969,7 +882,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section id="order">
+<section class="band" id="order">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Как заказать</p>
@@ -996,7 +909,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section class="band" id="reviews">
+<section id="reviews">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Отзывы</p>
@@ -1019,7 +932,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section id="contacts">
+<section class="band" id="contacts">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Контакты</p>
@@ -1031,7 +944,7 @@ body.has-cart .cart-bar{display:flex}
         <a href="https://t.me/betweenpages">Telegram<span>@betweenpages →</span></a>
         <a href="https://instagram.com/betweenpages">Instagram<span>@betweenpages →</span></a>
         <a href="mailto:hello@betweenpages.kz">Почта<span>hello@betweenpages.kz →</span></a>
-        <a href="#events">Самовывоз<span>Алматы, адрес пришлём в переписке →</span></a>
+        <a href="https://wa.me/77011118481">Самовывоз<span>Алматы, адрес пришлём в переписке →</span></a>
       </div>
       <div class="wholesale">
         <h3>Кофейням, клубам и библиотекам</h3>
@@ -1062,10 +975,6 @@ body.has-cart .cart-bar{display:flex}
     </div>
     <div class="drawer-body" id="cartList"></div>
     <div class="drawer-foot">
-      <div class="ship" id="ship">
-        <button data-ship="Самовывоз в Алматы" aria-pressed="true">Самовывоз в Алматы</button>
-        <button data-ship="Доставка курьером Казпочты" aria-pressed="false">Курьер Казпочты</button>
-      </div>
       <div class="total"><span>Итого</span><b id="cartTotal">0 ₸</b></div>
       <a class="btn btn-primary" id="cartSend" href="#">Отправить заказ в WhatsApp</a>
       <p class="hint">Оплата Kaspi по QR или переводом после подтверждения</p>
@@ -1093,7 +1002,6 @@ body.has-cart .cart-bar{display:flex}
         <h4>Бренд</h4>
         <ul>
           <li><a href="#about">О бренде</a></li>
-          <li><a href="#events">Афиша</a></li>
           <li><a href="#order">Доставка и оплата</a></li>
         </ul>
       </div>
@@ -1150,7 +1058,7 @@ body.has-cart .cart-bar{display:flex}
 
   /* ---------- корзина ---------- */
   var WA='https://wa.me/77011118481';
-  var cart={}, ship='Самовывоз в Алматы';
+  var cart={};
   try{ var raw=localStorage.getItem('bp-cart'); if(raw) cart=JSON.parse(raw)||{}; }catch(e){}
 
   var prodEls=[].slice.call(document.querySelectorAll('[data-id][data-price]'));
@@ -1175,7 +1083,7 @@ body.has-cart .cart-bar{display:flex}
     items().forEach(function(i,n){
       lines.push((n+1)+'. '+i.p.name+' — '+i.q+' шт. × '+money(i.p.price)+' = '+money(i.p.price*i.q));
     });
-    lines.push('', 'Итого: '+money(total()), ship);
+    lines.push('', 'Итого: '+money(total()));
     return lines.join('\n');
   }
 
@@ -1273,13 +1181,6 @@ body.has-cart .cart-bar{display:flex}
   overlay.addEventListener('click', function(e){ if(e.target===overlay) closeCart(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
   document.getElementById('cartClear').addEventListener('click', function(){ cart={}; render(); closeCart(); });
-
-  document.getElementById('ship').addEventListener('click', function(e){
-    var b=e.target.closest('[data-ship]'); if(!b) return;
-    ship=b.dataset.ship;
-    [].slice.call(this.children).forEach(function(x){ x.setAttribute('aria-pressed', String(x===b)); });
-    render();
-  });
 
   render();
 

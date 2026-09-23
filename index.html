@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <script>document.documentElement.lang="ru";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Between Pages — магнитные закладки для книг ручной сборки. Каталог, наборы, доставка по Казахстану. Алматы.">
+<meta name="description" content="Between Pages — магнитные закладки для книг ручной сборки. Каталог и доставка по Казахстану. Алматы.">
 <meta name="theme-color" content="#fdf6ee">
 <link rel="canonical" href="https://www.betweenpages.site/">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
@@ -186,20 +186,6 @@ section{padding:80px 0;scroll-margin-top:24px}
 .price{font-family:var(--sans);font-size:17px;font-weight:500;color:var(--sepia);
   letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 #empty{margin-top:24px;text-align:center}
-.set .price{font-size:19px}
-
-/* наборы */
-.sets{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.set{background:var(--card);border:1px solid var(--pebble);border-radius:16px;padding:24px;
-  display:flex;flex-direction:column;gap:12px}
-.set h3{font-size:24px;line-height:1.22;letter-spacing:-.013em}
-.set ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--bronze)}
-.set-foot{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:8px}
-.was{font-size:14px;color:var(--stone);text-decoration:line-through}
-.build{grid-column:1 / -1;background:var(--card);border:1px solid var(--pebble);border-radius:16px;
-  padding:32px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.build h3{font-size:40px;line-height:1.2;letter-spacing:-.02em}
-.build p{margin-top:12px;max-width:52ch}
 
 /* «портретная» панель: продукт в центре, характеристики по краям */
 .trust{display:grid;grid-template-columns:1fr 1.05fr 1fr;gap:24px;align-items:stretch}
@@ -278,7 +264,6 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
   .orbit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
   .hero{padding:64px 0}
   .grid{grid-template-columns:repeat(3,1fr)}
-  .sets{grid-template-columns:repeat(2,1fr)}
   .trust{grid-template-columns:1fr 1fr}
   .portrait{grid-column:1 / -1;order:-1;min-height:340px}
 }
@@ -332,10 +317,6 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
   .card-foot .btn{width:100%}
   .price{font-size:21px}
 
-  .sets{grid-template-columns:1fr;gap:12px}
-  .build{padding:24px}
-  .build h3{font-size:28px}
-  .build .btn{width:100%}
   .feature{padding:20px}
   .feature-top{gap:14px}
   .feature-art{width:72px;height:72px}
@@ -370,8 +351,6 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
 .pick button:disabled{color:var(--stone);cursor:default;border-color:var(--pebble)}
 .pick .val{min-width:22px;text-align:center;font-size:15px;font-variant-numeric:tabular-nums;color:var(--sepia)}
 .incart{font-size:13px;color:var(--ember);text-align:center}
-.set-foot{flex-wrap:wrap}
-.set .pick{margin-left:auto}
 @media (max-width:600px){
   .card .foot-row{flex-direction:column;align-items:stretch;gap:10px}
   .card .pick{justify-content:space-between}
@@ -379,7 +358,6 @@ footer.site{background:var(--soft-cream);border-top:1px solid var(--pebble);padd
 }
 
 /* ---------- корзина ---------- */
-.set .btn{align-self:flex-start}
 body.has-cart{padding-bottom:104px}
 
 .cart-bar{
@@ -456,7 +434,6 @@ body.has-cart .cart-bar{display:flex}
       <div class="nav-l">
         <a class="lnk" href="#collections">Коллекции</a>
         <a class="lnk" href="#catalog">Каталог</a>
-        <a class="lnk" href="#sets">Наборы</a>
       </div>
       <a href="#top" aria-label="Between Pages"><img class="mark" src="assets/logo.png" alt="Between Pages"></a>
       <div class="nav-r">
@@ -468,7 +445,6 @@ body.has-cart .cart-bar{display:flex}
     <nav class="nav-mob" id="navmob">
       <a href="#collections">Коллекции</a>
       <a href="#catalog">Каталог</a>
-      <a href="#sets">Наборы</a>
       <a href="#about">О бренде</a>
       <a href="#contacts">Контакты</a>
     </nav>
@@ -755,51 +731,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section id="sets">
-  <div class="wrap">
-    <div class="sec">
-      <p class="eyebrow">Наборы и подарки</p>
-      <h2>Две закладки</h2>
-      <p>В наборе — приятнее по цене, чем при покупке по отдельности.</p>
-    </div>
-    <div class="sets">
-      <div class="set" data-id="set-coffee" data-name="Набор «Кофейный перерыв»" data-price="3400" data-img="assets/matcha.png">
-        <h3>Кофейный перерыв</h3>
-        <ul><li>Matcha &amp; Books</li><li>Pumpkin Spice Latte</li></ul>
-        <div class="set-foot"><span class="price">3 400 ₸</span><span class="was">3 800 ₸</span></div>
-        <button class="btn btn-ghost sm" data-add>В корзину</button>
-      </div>
-      <div class="set" data-id="set-pitstop" data-name="Набор «Пит-стоп»" data-price="3400" data-img="assets/car16.png">
-        <h3>Пит-стоп</h3>
-        <ul><li>Болид №16</li><li>Болид №44</li></ul>
-        <div class="set-foot"><span class="price">3 400 ₸</span><span class="was">3 800 ₸</span></div>
-        <button class="btn btn-ghost sm" data-add>В корзину</button>
-      </div>
-      <div class="set" data-id="set-gym" data-name="Набор «Спортзал для головы»" data-price="3400" data-img="assets/gloves.png">
-        <h3>Спортзал для головы</h3>
-        <ul><li>Боксёрские перчатки</li><li>Теннис</li></ul>
-        <div class="set-foot"><span class="price">3 400 ₸</span><span class="was">3 800 ₸</span></div>
-        <button class="btn btn-ghost sm" data-add>В корзину</button>
-      </div>
-      <div class="set" data-id="set-evening" data-name="Набор «Вечер»" data-price="3500" data-img="assets/piano.png">
-        <h3>Вечер</h3>
-        <ul><li>Рояль</li><li>Cheers</li></ul>
-        <div class="set-foot"><span class="price">3 500 ₸</span><span class="was">3 900 ₸</span></div>
-        <button class="btn btn-ghost sm" data-add>В корзину</button>
-      </div>
-      <div class="build">
-        <div>
-          <h3>Собери свой набор</h3>
-          <p class="body">Любые три закладки — минус 10%. Напиши номера, остальное сделаем мы и отправим в тот же день.</p>
-          <p class="mono" style="margin-top:12px;color:var(--driftwood)">3 закладки · −10% · 5 130 ₸</p>
-        </div>
-        <a class="btn btn-primary" href="https://wa.me/77011118481?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%BD%D0%B0%D0%B1%D0%BE%D1%80%20%D0%B8%D0%B7%20%D1%82%D1%80%D1%91%D1%85%20%D0%B7%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BE%D0%BA.">Собрать в WhatsApp</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="quality">
+<section id="quality">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Из чего сделано</p>
@@ -846,7 +778,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section id="about">
+<section class="band" id="about">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">О бренде</p>
@@ -860,7 +792,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section class="band" id="order">
+<section id="order">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Как заказать</p>
@@ -871,7 +803,7 @@ body.has-cart .cart-bar{display:flex}
       <div class="step">
         <p class="n">01</p>
         <h3>Выбери</h3>
-        <p class="body">Отметь закладки или готовый набор. Не можешь решить — напиши, чем человек увлекается, подберём вместе.</p>
+        <p class="body">Отметь закладки в каталоге. Не можешь решить — напиши, чем человек увлекается, подберём вместе.</p>
       </div>
       <div class="step">
         <p class="n">02</p>
@@ -887,7 +819,7 @@ body.has-cart .cart-bar{display:flex}
   </div>
 </section>
 
-<section id="reviews">
+<section class="band" id="reviews">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Отзывы</p>
@@ -903,14 +835,14 @@ body.has-cart .cart-bar{display:flex}
         <div class="who"><span class="ava">Д</span><span><b>Данияр</b><span>Астана</span></span></div>
       </div>
       <div class="rev">
-        <q>Взяли набор «Вечер» для книжного клуба на 12 человек. Упаковали в крафт с подписью от руки — девочки визжали.</q>
+        <q>Взяли двенадцать штук для книжного клуба — разобрали за вечер, каждая выбрала свою.</q>
         <div class="who"><span class="ava">П</span><span><b>Клуб «Первая глава»</b><span>Алматы</span></span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band" id="contacts">
+<section id="contacts">
   <div class="wrap">
     <div class="sec">
       <p class="eyebrow">Контакты</p>
@@ -969,7 +901,6 @@ body.has-cart .cart-bar{display:flex}
         <h4>Каталог</h4>
         <ul>
           <li><a href="#catalog">Все закладки</a></li>
-          <li><a href="#sets">Наборы</a></li>
           <li><a href="#collections">Коллекции</a></li>
         </ul>
       </div>
